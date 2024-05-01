@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt06 8eddcadf",
+  "repo": "https://github.com/macros77/tt_project_02",
+  "commit": "34f97b13d1d8b22166bc04f394ea7902569ac860",
+  "workflow_url": "https://github.com/macros77/tt_project_02/actions/runs/8914075626",
+  "sort_id": 1714593292675,
+  "openlane_version": "OpenLane eaba5192c45aa333ab45216ce1773d75d539e9b3",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
