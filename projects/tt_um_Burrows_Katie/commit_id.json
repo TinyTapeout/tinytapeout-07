@@ -1,8 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/davidparent/tt_resistor_test",
-  "commit": "68146a11269e6017f63505e11a956c602290957a",
-  "workflow_url": "https://github.com/davidparent/tt_resistor_test/actions/runs/8989926331",
+  "commit": "8031df9e32447b159fff3df9ad28e519901663e8",
+  "workflow_url": "https://github.com/davidparent/tt_resistor_test/actions/runs/8992741127",
   "sort_id": 1715104070186,
   "analog": true
 }
