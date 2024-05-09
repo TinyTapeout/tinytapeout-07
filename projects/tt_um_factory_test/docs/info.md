@@ -10,10 +10,10 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 
 If `sel` is high, then a counter is output on the output pins and the bidirectional pins (`data_o = counter_o = counter`).
-If `sel` is low, the bidirectional pins are mirrored to the output pins (`data_o` = `data_i`).
+If `sel` is low, the input pins and the bidirectional pins are xored, and the result appears on the output pins (`data_o = in_a ^ in_b`).
 
 ## How to test
 
 Set `sel` high and observe that the counter is output on the output pins (`data_o`) and the bidirectional pins (`counter_o`).
 
-Set `sel` low and observe that the bidirectional pins are mirrored to the output pins (`data_o` = `data_i`).
+Set `sel` low and observe that the xor of the input pins (`in_a`) and the bidirectional pins (`in_b`) is output on `data_o`.
