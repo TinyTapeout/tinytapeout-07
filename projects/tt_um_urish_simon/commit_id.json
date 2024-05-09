@@ -1,8 +1,8 @@
 {
   "app": "Tiny Tapeout tt07 68e6da5b",
   "repo": "https://github.com/urish/tt07-simon-game",
-  "commit": "8d45d1e3bed305b7208cfad865cb4c7c233c5c09",
-  "workflow_url": "https://github.com/urish/tt07-simon-game/actions/runs/9022722783",
+  "commit": "24d1d6208e40dc58a8cbd212fb7bef57490977a1",
+  "workflow_url": "https://github.com/urish/tt07-simon-game/actions/runs/9023232093",
   "sort_id": 1715284945270,
   "openlane_version": "OpenLane 337ffbf4749b8bc6e8d8742ed9a595934142198b",
   "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
