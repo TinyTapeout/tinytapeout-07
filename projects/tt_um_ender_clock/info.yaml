@@ -17,6 +17,10 @@ project:
   source_files:        
     - "project.v"
     - "segment_show.v"
+    - "time_control.v"
+    - "segment_code.v"
+    - "day_of_month.v"
+    - "key.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
