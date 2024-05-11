@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "calculator"      # Project title
+  author:       "ZHU QUANHAO"      # Your name
+  discord:      "zhuquanhao"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "input two number and do all kinds of calculation base on it"      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     100       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_DanielZhu123"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "bit1_XOR"
+  ui[1]: "bit2_OR"
+  ui[2]: "bit3_AND"
+  ui[3]: "bit4_ADD"
+  ui[4]: "numbersel_NOT"
+  ui[5]: "positionsel_dispB"
+  ui[6]: "signsel_dispA"
+  ui[7]: "modesel"
+
+  # Outputs
+  uo[0]: "display"
+  uo[1]: "display"
+  uo[2]: "display"
+  uo[3]: "display"
+  uo[4]: "display"
+  uo[5]: "display"
+  uo[6]: "display"
+  uo[7]: "display"
+
+  # Bidirectional pins
+  uio[0]: "display"
+  uio[1]: "display"
+  uio[2]: "display"
+  uio[3]: "display"
+  uio[4]: "display"
+  uio[5]: "display"
+  uio[6]: "power13"
+  uio[7]: "power24"
+
+# Do not change!
+yaml_version: 6
