@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "Send Receive"      # Project title
+  author:       "Michael Ogata, Nelson Hastings, Samson Melamed"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A dual use project where you can set a project to either a sender or receiver and send bits"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_The_Chairman_send_receive"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Input[0]/Message Ready"
+  ui[1]: "Input[1]/recv_bit[0]"
+  ui[2]: "Input[2]/recv_bit[1]"
+  ui[3]: "Input[3]/recv_bit[2]"
+  ui[4]: "unused/recv_bit[3]"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "Sender/Receiver Mode Select (0/1)"
+
+  # Outputs
+  uo[0]: "Transmit/LCD Display Value[0]"
+  uo[1]: "input[0]/LCD Display Value[1]"
+  uo[2]: "Input[1]/LCD Display Value[2]"
+  uo[3]: "Input[2]/LCD Display Value[3]"
+  uo[4]: "Input[3]/LCD Display Value[4]"
+  uo[5]: "unused/LCD Display Value[5]"
+  uo[6]: "unused/LCD Display Value[6]"
+  uo[7]: "Mode of connected chip//LCD Display Value[7]"
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
