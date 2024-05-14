@@ -1,8 +1,8 @@
 {
-  "app": "Tiny Tapeout tt07 dd5f1685",
+  "app": "Tiny Tapeout tt07 5e4d73d4",
   "repo": "https://github.com/vrteee/tt07-mini-aie-cgra",
-  "commit": "a436a2c70e1a3f041a8ee4a9f6982205e228748c",
-  "workflow_url": "https://github.com/vrteee/tt07-mini-aie-cgra/actions/runs/9078712748",
+  "commit": "4a69a44f5f696146c0e3d17fee07bf8d31f141d9",
+  "workflow_url": "https://github.com/vrteee/tt07-mini-aie-cgra/actions/runs/9084429189",
   "sort_id": 1715687885395,
   "openlane_version": "OpenLane 337ffbf4749b8bc6e8d8742ed9a595934142198b",
   "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
