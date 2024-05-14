@@ -18,6 +18,7 @@ The project is designed to demonstrate the underlying Verilog modules, which sho
  - UART receiver and transmitter (8N1 only, no flow control)
  - linear-feedback pseudo-random number generator
  - character ROM
+ 
  The cocotb code to parse the [WS2812B protocol](https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf) might also be useful to others.
 
 
