@@ -9,10 +9,34 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-https://www.youtube.com/watch?v=KFVVozlXoOk
+The circuit uses a "Twin Tee" filter along with an opamp to generate a sine wave.
+
 https://www.electronics-tutorials.ws/oscillator/twin-t-oscillator.html
 
-f = 1 / 2 * pi * RC
+    f = 1 / 2 * pi * RC
+
+### Notch filter AC analysis
+
+![Notch filter AC analysis](notch_ac.png)
+
+### Opamp AC analysis
+
+![Opamp AC analysis](p3_opamp_ac.png)
+
+### Transient analysis
+
+This simulation was done with a "montecarlo mismatch corner" which aims to test how well the circuit will work
+as the resistance and transistors change across process corners. Each run is shown in a different colour. If R6 resistor
+in the Twin Tee filter is too high, the oscillations quickly die out, so it's deliberately undersized at the expense of
+distortion in the sine wave.
+
+![Twin Tee output transient analysis](twin_trans.png)
+
+## Acknowledgements
+
+* The [opamp design comes from Sai](https://github.com/argunda/tt06-tiny-opamp)
+* The [opamp layout comes from Pat Deegan](https://github.com/psychogenic/tt06-analog-wowa)
+* Inspired by this video by [Alan Wolke](https://www.youtube.com/watch?v=KFVVozlXoOk). 
 
 ## How to test
 
@@ -20,4 +44,4 @@ After the project is enabled, you should see a sine wave at around 6.3MHz on ana
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Oscilloscope.
