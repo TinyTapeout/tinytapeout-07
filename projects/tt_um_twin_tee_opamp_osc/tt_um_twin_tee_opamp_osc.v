@@ -25,16 +25,15 @@ module tt_um_twin_tee_opamp_osc (
         .vss(VGND)
         );
 
-    // ties for the output enables
-    assign uo_out[0] = VGND;
-    assign uo_out[1] = VGND;
-    assign uo_out[2] = VGND;
-    assign uo_out[3] = VGND;
-    assign uo_out[4] = VGND;
-    assign uo_out[5] = VGND;
-    assign uo_out[6] = VGND;
-    assign uo_out[7] = VGND;
+    osc_counter osc_counter(
+        .n_rst(rst_n),
+        .clk(ua[0]),
+        .count(uo_out),
+        .VPWR(VPWR),
+        .VGND(VGND)
+        );
 
+    // ties for usused outputs
     assign uio_out[0] = VGND;
     assign uio_out[1] = VGND;
     assign uio_out[2] = VGND;
