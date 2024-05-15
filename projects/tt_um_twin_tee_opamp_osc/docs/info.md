@@ -11,6 +11,8 @@ You can also include images in this folder and reference them in the markdown. E
 
 The circuit uses a "Twin Tee" filter along with an opamp to generate a sine wave.
 
+![Twin Tee Notch Filter](twin_tee_schematic.png)
+
 https://www.electronics-tutorials.ws/oscillator/twin-t-oscillator.html
 
     f = 1 / 2 * pi * RC
@@ -41,6 +43,9 @@ distortion in the sine wave.
 ## How to test
 
 After the project is enabled, you should see a sine wave at around 6.3MHz on analog output pin 0.
+
+There is also a 20 bit digital counter connected to the oscillator output. The top 8 bits are connected to the LEDs.
+So you should also see the most significant bit flashing every ~6 seconds.
 
 ## External hardware
 

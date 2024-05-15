@@ -33,14 +33,14 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "counter bit 12"
+  uo[1]: "counter bit 13"
+  uo[2]: "counter bit 14"
+  uo[3]: "counter bit 15"
+  uo[4]: "counter bit 16"
+  uo[5]: "counter bit 17"
+  uo[6]: "counter bit 18"
+  uo[7]: "counter bit 19"
 
   # Bidirectional pins
   uio[0]: ""
