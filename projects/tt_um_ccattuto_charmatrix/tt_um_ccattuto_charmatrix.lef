@@ -76,7 +76,7 @@ MACRO tt_um_ccattuto_charmatrix
   PIN ui_in[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213000 ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 147.510 224.760 147.810 225.760 ;
@@ -85,7 +85,7 @@ MACRO tt_um_ccattuto_charmatrix
   PIN ui_in[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213000 ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 143.830 224.760 144.130 225.760 ;
@@ -94,7 +94,7 @@ MACRO tt_um_ccattuto_charmatrix
   PIN ui_in[2]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.196500 ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 140.150 224.760 140.450 225.760 ;
@@ -112,7 +112,7 @@ MACRO tt_um_ccattuto_charmatrix
   PIN ui_in[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.126000 ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 132.790 224.760 133.090 225.760 ;
@@ -121,7 +121,7 @@ MACRO tt_um_ccattuto_charmatrix
   PIN ui_in[5]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213000 ;
+    ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met4 ;
         RECT 129.110 224.760 129.410 225.760 ;
@@ -130,6 +130,7 @@ MACRO tt_um_ccattuto_charmatrix
   PIN ui_in[6]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.213000 ;
     PORT
       LAYER met4 ;
         RECT 125.430 224.760 125.730 225.760 ;
@@ -138,6 +139,7 @@ MACRO tt_um_ccattuto_charmatrix
   PIN ui_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
     PORT
       LAYER met4 ;
         RECT 121.750 224.760 122.050 225.760 ;
@@ -407,13 +409,12 @@ MACRO tt_um_ccattuto_charmatrix
       LAYER li1 ;
         RECT 2.760 2.635 158.240 223.125 ;
       LAYER met1 ;
-        RECT 0.070 0.040 160.470 225.040 ;
+        RECT 1.450 1.060 159.040 224.360 ;
       LAYER met2 ;
-        RECT 0.100 0.010 160.440 225.070 ;
+        RECT 1.480 1.030 159.010 224.925 ;
       LAYER met3 ;
-        RECT 0.525 0.175 159.030 224.905 ;
+        RECT 3.285 2.555 159.030 224.905 ;
       LAYER met4 ;
-        RECT 1.215 224.360 3.590 224.905 ;
         RECT 4.690 224.360 7.270 224.905 ;
         RECT 8.370 224.360 10.950 224.905 ;
         RECT 12.050 224.360 14.630 224.905 ;
@@ -455,15 +456,15 @@ MACRO tt_um_ccattuto_charmatrix
         RECT 144.530 224.360 147.110 224.905 ;
         RECT 148.210 224.360 150.790 224.905 ;
         RECT 151.890 224.360 154.470 224.905 ;
-        RECT 1.215 223.680 155.185 224.360 ;
-        RECT 1.215 4.255 20.995 223.680 ;
-        RECT 23.395 4.255 40.430 223.680 ;
-        RECT 42.830 4.255 59.865 223.680 ;
-        RECT 62.265 4.255 79.300 223.680 ;
-        RECT 81.700 4.255 98.735 223.680 ;
-        RECT 101.135 4.255 118.170 223.680 ;
-        RECT 120.570 4.255 137.605 223.680 ;
-        RECT 140.005 4.255 155.185 223.680 ;
+        RECT 3.975 223.680 155.185 224.360 ;
+        RECT 3.975 10.375 20.995 223.680 ;
+        RECT 23.395 10.375 40.430 223.680 ;
+        RECT 42.830 10.375 59.865 223.680 ;
+        RECT 62.265 10.375 79.300 223.680 ;
+        RECT 81.700 10.375 98.735 223.680 ;
+        RECT 101.135 10.375 118.170 223.680 ;
+        RECT 120.570 10.375 137.605 223.680 ;
+        RECT 140.005 10.375 155.185 223.680 ;
   END
 END tt_um_ccattuto_charmatrix
 END LIBRARY
