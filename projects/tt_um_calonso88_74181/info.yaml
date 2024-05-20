@@ -1,0 +1,63 @@
+# Tiny Tapeout project information
+project:
+  title:        "ALU 74181"      # Project title
+  author:       "Caio Alonso da Costa"      # Your name
+  discord:      "caioalonso5175"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "SPI peripheral and an 8-bit ALU implemented with 2x 4-bit slice arithmetic logic unit 74181"      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_calonso88_74181"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_calonso88_74181.v"
+    - "alu_74181.sv"
+    - "alu_74181_logic.sv"
+    - "alu_74181_arith.sv"
+    - "bin_to_7seg_decoder.sv"
+    - "synchronizer.sv"
+    - "spi_wrapper.sv"
+    - "spi_reg.sv"
+    - "falling_edge_detector.sv"
+    - "rising_edge_detector.sv"
+    - "mux6x1.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "spi_cs_n"
+  ui[1]: "spi_clk"
+  ui[2]: "spi_mosi"
+  ui[3]: "cpol"
+  ui[4]: "cpha"
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: "spi_miso"
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
