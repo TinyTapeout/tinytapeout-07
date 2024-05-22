@@ -1,0 +1,25 @@
+
+63. Printing statistics.
+
+=== tt_um_jorga20j_prng ===
+
+   Number of wires:                 55
+   Number of wire bits:             90
+   Number of public wires:          16
+   Number of public wire bits:      51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 71
+     sky130_fd_sc_hd__a21o_2         5
+     sky130_fd_sc_hd__a22o_2         3
+     sky130_fd_sc_hd__and2_2         9
+     sky130_fd_sc_hd__buf_1          9
+     sky130_fd_sc_hd__conb_1        16
+     sky130_fd_sc_hd__dfxtp_2       16
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__xnor2_2       11
+     sky130_fd_sc_hd__xor2_2         1
+
+   Chip area for module '\tt_um_jorga20j_prng': 774.492800
+
