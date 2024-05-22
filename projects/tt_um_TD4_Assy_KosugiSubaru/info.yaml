@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "4bit_CPU_td4"      # Project title
+  author:       "Ko Kosugi"      # Your name
+  discord:      "Ko"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "4bit_CPU"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_TD4_Assy_KosugiSubaru"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_TD4_Assy_KosugiSubaru.v"
+    - "TD4_RTL.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "data_0"
+  ui[1]: "data_1"
+  ui[2]: "data_2"
+  ui[3]: "data_3"
+  ui[4]: "data_4"
+  ui[5]: "data_5"
+  ui[6]: "data_6"
+  ui[7]: "data_7"
+
+  # Outputs
+  uo[0]: "addres_0"
+  uo[1]: "addres_1"
+  uo[2]: "addres_2"
+  uo[3]: "addres_3"
+  uo[4]: "cf"
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "input_0"
+  uio[1]: "input_1"
+  uio[2]: "input_2"
+  uio[3]: "input_3"
+  uio[4]: "output_0"
+  uio[5]: "output_1"
+  uio[6]: "output_2"
+  uio[7]: "output_3"
+
+# Do not change!
+yaml_version: 6
