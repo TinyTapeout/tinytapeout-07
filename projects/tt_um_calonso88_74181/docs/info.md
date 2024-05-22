@@ -14,11 +14,13 @@ https://en.wikipedia.org/wiki/74181
 
 The project instantiate two times the replica of the 74818 to perform mathematical and logical operations on 8 bit words.
 
-A multiplex to map data to a 7 segment display is also created to support debug.
+A multiplex  is used to taps different parts of the user logic and map them to the 7 segment display to support debug.
 
 Due to I/O constraints, a SPI slave peripheral has been created to load/read data into the design.
 
 SPI Slave peripheral implementation supports all 4 SPI modes of operation. 8 Configurable (Read/Write) registers. 8 Status (Read only) registers.
+
+RP2040 SPI1 is used to communicate with the device. Map SPI1 IOs to GPIOs 24 to 27.
 
 ## Limitations on SPI:
  - Single register access per SPI transaction.
@@ -42,12 +44,12 @@ SPI Slave peripheral implementation supports all 4 SPI modes of operation. 8 Con
 | 7 | Configurable Read/Write register [7] |
 | 8 | Status Read Only register [0] - Data F (8 bits)||
 | 9 | Status Read Only register [1] - {c_out0, equal0, p0, g0, c_out1, equal1, p1, g1} [7:0] (8 bits) |
-| 10 | Status Read Only register [2] |
-| 11 | Status Read Only register [3] |
-| 12 | Status Read Only register [4] |
-| 13 | Status Read Only register [5] |
-| 14 | Status Read Only register [6] |
-| 15 | Status Read Only register [7] |
+| 10 | Status Read Only register [2] - Output of debug Multiplexer [3:0] (4 bits) and Zeros [7:4] (4 bits) |
+| 11 | Status Read Only register [3] - Output of bin_to_7seg_decoder (8 bits) |
+| 12 | Status Read Only register [4] - Fixed data 8'hC4 (8 bits) |
+| 13 | Status Read Only register [5] - Fixed data 8'h10 (8 bits) |
+| 14 | Status Read Only register [6] - Fixed data 8'h66 (8 bits) |
+| 15 | Status Read Only register [7] - Output of bin_to_7seg_decoder delayed by 1 clock cycle (8 bits) |
 
 ## Connection
 
@@ -88,7 +90,7 @@ cmd = 0x00+addr, addr = 0 ~ 15
 
 ## How to test
 
-Use SPI Master peripheral in RP2040 to start communication on SPI interface towards this design. Remember to configure the SPI mode using the switches in DIP switch and configure the SPI mode in the RP2040 accordingly.
+Use SPI1 Master peripheral in RP2040 to start communication on SPI interface towards this design. Remember to configure the SPI mode using the switches in DIP switch and configure the SPI mode in the RP2040 accordingly.
 
 ## External hardware
 
