@@ -1,0 +1,28 @@
+
+64. Printing statistics.
+
+=== tt_um_drburke3_top ===
+
+   Number of wires:                 25
+   Number of wire bits:             60
+   Number of public wires:          11
+   Number of public wire bits:      46
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 41
+     sky130_fd_sc_hd__a211o_2        1
+     sky130_fd_sc_hd__and2b_2        4
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__and3b_2        1
+     sky130_fd_sc_hd__buf_1          2
+     sky130_fd_sc_hd__buf_2          3
+     sky130_fd_sc_hd__conb_1        21
+     sky130_fd_sc_hd__nand4_2        1
+     sky130_fd_sc_hd__nor2_2         1
+     sky130_fd_sc_hd__o211ai_2       1
+     sky130_fd_sc_hd__or2b_2         4
+     sky130_fd_sc_hd__or4_2          1
+
+   Chip area for module '\tt_um_drburke3_top': 238.979200
+
