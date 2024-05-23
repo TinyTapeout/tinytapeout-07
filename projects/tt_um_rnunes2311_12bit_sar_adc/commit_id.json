@@ -1,8 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/rnunes2311/tt07-12bit_SAR_ADC",
-  "commit": "a165c4681661b479a2c064c1950d9ad5719485f3",
-  "workflow_url": "https://github.com/rnunes2311/tt07-12bit_SAR_ADC/actions/runs/9044326084",
+  "commit": "41972e20850b02011d103782ed9710944b564598",
+  "workflow_url": "https://github.com/rnunes2311/tt07-12bit_SAR_ADC/actions/runs/9053848266",
   "sort_id": 1715435727308,
   "analog": true
 }
