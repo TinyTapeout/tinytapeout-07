@@ -1,0 +1,39 @@
+
+66. Printing statistics.
+
+=== tt_um_ejfogleman_smsdac8 ===
+
+   Number of wires:                284
+   Number of wire bits:            319
+   Number of public wires:          87
+   Number of public wire bits:     122
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                300
+     sky130_fd_sc_hd__a21bo_2        1
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__and2_2         1
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__buf_1         47
+     sky130_fd_sc_hd__conb_1        10
+     sky130_fd_sc_hd__dfrtp_2       77
+     sky130_fd_sc_hd__dfstp_2        1
+     sky130_fd_sc_hd__inv_2         27
+     sky130_fd_sc_hd__mux2_2        71
+     sky130_fd_sc_hd__nand2_2       12
+     sky130_fd_sc_hd__nand3_2        1
+     sky130_fd_sc_hd__nor2_2         2
+     sky130_fd_sc_hd__o21a_2         4
+     sky130_fd_sc_hd__o21ai_2        3
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o21bai_2       1
+     sky130_fd_sc_hd__or2_2          7
+     sky130_fd_sc_hd__or2b_2         3
+     sky130_fd_sc_hd__xnor2_2       17
+     sky130_fd_sc_hd__xor2_2        10
+
+   Chip area for module '\tt_um_ejfogleman_smsdac8': 3907.497600
+
