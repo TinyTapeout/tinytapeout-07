@@ -37,6 +37,11 @@ jobs:
           path: openlane2
           ref: ${{ env.OPENLANE_TAG }}
 
+      - name: Patch OpenLane 2 repo
+        working-directory: openlane2
+        run:
+          git apply --allow-empty ../patches/openlane2.patch
+
       - name: setup python
         uses: actions/setup-python@v5
         with:
@@ -51,8 +56,9 @@ jobs:
 
       - uses: cachix/cachix-action@v14
         with:
-          name: openlane
+          name: tinytapeout
           extraPullNames: openlane
+          authToken: ${{ secrets.CACHIX_TOKEN }}
 
       - name: Install Sky130 PDK
         uses: TinyTapeout/volare-action@v2
