@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title: "FP-8 MAC Module" # Project title
+  author: "Wilfred Kisku" # Your name
+  discord: "wilfredk" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description: "A simple MAC implementation using Chisel for two FP8 numbers, incorporates both addition and multiplication for FP8 numbers. Partial register at 0x00 which is the start value. Result is valid after 3 clock cycles." # One line description of what your project does
+  language: "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz: 0 # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1" # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module: "tt_um_fp_mac"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "MAC_TOP_FP8.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "FP8 input A pin 0."
+  ui[1]: "FP8 input A pin 1."
+  ui[2]: "FP8 input A pin 2."
+  ui[3]: "FP8 input A pin 3."
+  ui[4]: "FP8 input A pin 4."
+  ui[5]: "FP8 input A pin 5."
+  ui[6]: "FP8 input A pin 6."
+  ui[7]: "FP8 input A pin 7."
+
+  # Outputs
+  uo[0]: "FP8 output pin 0."
+  uo[1]: "FP8 output pin 1."
+  uo[2]: "FP8 output pin 2."
+  uo[3]: "FP8 output pin 3."
+  uo[4]: "FP8 output pin 4."
+  uo[5]: "FP8 output pin 5."
+  uo[6]: "FP8 output pin 6."
+  uo[7]: "FP8 output pin 7."
+
+  # Bidirectional pins
+  uio[0]: "FP8 input B pin 0."
+  uio[1]: "FP8 input B pin 1."
+  uio[2]: "FP8 input B pin 2."
+  uio[3]: "FP8 input B pin 3."
+  uio[4]: "FP8 input B pin 4."
+  uio[5]: "FP8 input B pin 5."
+  uio[6]: "FP8 input B pin 6."
+  uio[7]: "FP8 input B pin 7."
+
+# Do not change!
+yaml_version: 6
