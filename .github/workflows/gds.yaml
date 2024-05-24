@@ -56,8 +56,8 @@ jobs:
 
       - uses: cachix/cachix-action@v14
         with:
-          name: tinytapeout
-          extraPullNames: openlane
+          name: ${{ vars.CACHIX_CACHE || 'tinytapeout' }}
+          extraPullNames: ${{ vars.CACHIX_CACHE_EXTRA || 'openlane' }}
           authToken: ${{ secrets.CACHIX_TOKEN }}
 
       - name: Install Sky130 PDK
