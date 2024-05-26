@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "VGA player"      # Project title
+  author:       "shadow1229"      # Your name
+  discord:      "QMA#4182"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "80 x 60 binary pixel video player with PCM/PWM audio playing feature"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     31500000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_shadow1229_vga_player"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - tt_vga_player.v
+    - VgaSyncGen.v
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "74880Hz 1-bit PCM(0) / 9360Hz 8-bit PWM(1)"
+  ui[1]: "Tiny VGA(0) / VGA clock PMOD(1)"
+  ui[2]: "color_off(0) - R"
+  ui[3]: "color_off(0) - G"
+  ui[4]: "color_off(0) - B"
+  ui[5]: "color_on(1)  - R"
+  ui[6]: "color_on(1)  - G"
+  ui[7]: "color_on(1)  - B"
+
+  # Outputs
+  uo[0]: "hsync / R1"
+  uo[1]: "vsync / G1"
+  uo[2]: "B0 / B1"
+  uo[3]: "B1 / VS"
+  uo[4]: "G0 / R0"
+  uo[5]: "G1 / G0"
+  uo[6]: "R0 / B0"
+  uo[7]: "R1 / HS"
+
+  # Bidirectional pins
+  uio[0]: "sound n"
+  uio[1]: "sound p"
+  uio[2]: "spi I/O 0 (W25Q128JVSSIQ NOR SPI flash chip)"
+  uio[3]: "spi I/O 1"
+  uio[4]: "spi I/O 2"
+  uio[5]: "spi I/O 3"
+  uio[6]: "spi flash clock"
+  uio[7]: "spi chip select"
+
+# Do not change!
+yaml_version: 6
