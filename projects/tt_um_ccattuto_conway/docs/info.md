@@ -17,13 +17,15 @@ This projects simulates [Conway's Game of Life](https://en.wikipedia.org/wiki/Co
 
 The UART interface of the project is exposed according the the Tiny Tapeout recommended pinout, with `ui_in[3]` used for RX signal and `uo_out[4]` for TX. The UART is configured as 8N1 at 115200 baud, with no flow control.
 
+VGA output of the simulation state is also exposed on the bidirectional pins, that are all configured as outputs and wired to work with a [TinyVGA PMOD](https://github.com/mole99/tiny-vga).
 
 ## How to test
 
-Connected the UART interface of the project to any UART terminal, or to an UART-to-USB PMOD or adapter, e.g., the one provided by the onboard RP2040 of the PCB. Configure the serial interface for 8 bits, 1 start bit, no parity bit, 1 stop bit (8N1), with no hardware or software flow control. Open the terminal and type any characters: this will bring up a welcome message explaining how to control the simulation.
+Connected the UART interface of the project to any UART terminal, or to an UART-to-USB PMOD or adapter, e.g., the one provided by the onboard RP2040 of the PCB. Configure the serial interface for 8 bits, 1 start bit, no parity bit, 1 stop bit (8N1), with no hardware or software flow control. Open the terminal and type any character: this will bring up a welcome message explaining how to control the simulation.
 
 
 ## External hardware
 
-UART terminal, or UART-to-USB adapter (PMOD or on-board via RP2040).
+UART terminal, or UART-to-USB adapter (PMOD or on-board via RP2040). Optionally, [TinyVGA PMOD](https://github.com/mole99/tiny-vga) for VGA output.
+
 

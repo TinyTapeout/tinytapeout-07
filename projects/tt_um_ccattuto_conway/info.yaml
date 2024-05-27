@@ -19,6 +19,7 @@ project:
     - "lfsr_rng.v"
     - "UARTTransmitter.v"
     - "UARTReceiver.v"
+    - "hvsync_generator.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
@@ -43,14 +44,14 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "hsync"
+  uio[1]: "B[0]"
+  uio[2]: "G[0]"
+  uio[3]: "R[0]"
+  uio[4]: "vsync"
+  uio[5]: "B[1]"
+  uio[6]: "G[1]"
+  uio[7]: "R[1]"
 
 # Do not change!
 yaml_version: 6
