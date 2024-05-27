@@ -26,5 +26,5 @@ Another way to test is on a IceStick HX1K. Instructions coming soon!
 
 ## External hardware
 
-- [QSPI PMOD from machdyne](https://machdyne.com/product/qqspi-psram32/)
+- [QSPI PSRAM PMOD from machdyne](https://machdyne.com/product/qqspi-psram32/)
 - 240x320 ST7789V screen
