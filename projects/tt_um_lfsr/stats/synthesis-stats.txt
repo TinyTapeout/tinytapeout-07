@@ -1,0 +1,37 @@
+
+65. Printing statistics.
+
+=== tt_um_lfsr ===
+
+   Number of wires:                243
+   Number of wire bits:            278
+   Number of public wires:         108
+   Number of public wire bits:     143
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                259
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a22o_2        32
+     sky130_fd_sc_hd__and2_2         1
+     sky130_fd_sc_hd__and3_2         2
+     sky130_fd_sc_hd__and3b_2        2
+     sky130_fd_sc_hd__and4b_2        1
+     sky130_fd_sc_hd__and4bb_2       2
+     sky130_fd_sc_hd__buf_1         47
+     sky130_fd_sc_hd__buf_2          2
+     sky130_fd_sc_hd__conb_1        22
+     sky130_fd_sc_hd__dfrtp_2       32
+     sky130_fd_sc_hd__dfxtp_2       36
+     sky130_fd_sc_hd__inv_2         32
+     sky130_fd_sc_hd__mux2_2        37
+     sky130_fd_sc_hd__nand2_2        2
+     sky130_fd_sc_hd__nand3_2        2
+     sky130_fd_sc_hd__nor2_2         1
+     sky130_fd_sc_hd__o21bai_2       1
+     sky130_fd_sc_hd__or3b_2         1
+     sky130_fd_sc_hd__xnor2_2        2
+     sky130_fd_sc_hd__xor2_2         1
+
+   Chip area for module '\tt_um_lfsr': 2927.808000
+
