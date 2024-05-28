@@ -36,19 +36,19 @@ pinout:
   uo[2]: "addres_2"
   uo[3]: "addres_3"
   uo[4]: "cf"
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[5]: "ALU_to_reg_0"
+  uo[6]: "ALU_to_reg_1"
+  uo[7]: "ALU_to_reg_2"
 
   # Bidirectional pins
-  uio[0]: "input_0"
-  uio[1]: "input_1"
-  uio[2]: "input_2"
-  uio[3]: "input_3"
-  uio[4]: "output_0"
-  uio[5]: "output_1"
-  uio[6]: "output_2"
-  uio[7]: "output_3"
+  uio[0]: "IO_0"
+  uio[1]: "IO_1"
+  uio[2]: "IO_2"
+  uio[3]: "IO_3"
+  uio[4]: "0"
+  uio[5]: "ALU_to_reg_3"
+  uio[6]: "select_0"
+  uio[7]: "select_1"
 
 # Do not change!
 yaml_version: 6
