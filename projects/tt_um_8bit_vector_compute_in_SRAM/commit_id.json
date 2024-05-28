@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt07 98e94823",
+  "repo": "https://github.com/ramyadhadidi/tt07-8bit-vector-compute-in-SRAM",
+  "commit": "5f9c5f7b862115bc0431242f63e472443a60c9db",
+  "workflow_url": "https://github.com/ramyadhadidi/tt07-8bit-vector-compute-in-SRAM/actions/runs/9270763872",
+  "sort_id": 1716905719511,
+  "openlane_version": "OpenLane 337ffbf4749b8bc6e8d8742ed9a595934142198b",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
