@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "TTDLL"      # Project title
+  author:       "Dan Petrisko"      # Your name
+  discord:      "Pencan"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "An all-digital DLL"      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_dpetrisko_ttdll"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "project.sv2v.v"
+    - "bsg_nonsynth_delay_line.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "p_tag_clk_i"
+  ui[1]: "p_tag_en_i"
+  ui[2]: "p_tag_data_i"
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "p_osc_clk_o"
+  uo[1]: "p_ds_clk_o"
+  uo[2]: "p_gen_clk_o"
+  uo[3]: "p_dly_clk_o"
+  uo[4]: "p_mon_clk_o"
+  uo[5]: "p_div_clk_o"
+  uo[6]: "p_ds_reset_o"
+  uo[7]: "p_mon_reset_o"
+
+  # Bidirectional pins
+  uio[0]: "p_div_count_0_o"
+  uio[1]: "p_div_count_1_o"
+  uio[2]: "p_div_count_2_o"
+  uio[3]: "p_div_count_3_o"
+  uio[4]: "p_div_count_4_o"
+  uio[5]: "p_div_count_5_o"
+  uio[6]: "p_div_count_6_o"
+  uio[7]: "p_div_count_7_o"
+
+# Do not change!
+yaml_version: 6
