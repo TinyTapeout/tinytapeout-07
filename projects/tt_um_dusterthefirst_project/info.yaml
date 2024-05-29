@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "443MHz Manchester Decoding"      # Project title
+  author:       "Zachary Kohnen"      # Your name
+  discord:      "dusterthefirst"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A manchester decoder and parser for a 433 mhz transmission"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     20_000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_dusterthefirst_project"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "digital_in"
+  ui[1]: ""
+  ui[2]: "halt"
+  ui[3]: ""
+  ui[4]: "address[0]"
+  ui[5]: "address[1]"
+  ui[6]: "address[2]"
+  ui[7]: "address[3]"
+
+  # Outputs
+  uo[0]: "parallel_out[0]"
+  uo[1]: "parallel_out[1]"
+  uo[2]: "parallel_out[2]"
+  uo[3]: "parallel_out[3]"
+  uo[4]: "parallel_out[4]"
+  uo[5]: "parallel_out[5]"
+  uo[6]: "parallel_out[6]"
+  uo[7]: "parallel_out[7]"
+
+  # Bidirectional pins
+  uio[0]: "full"
+  uio[1]: "manchester_clock"
+  uio[2]: "manchester_data"
+  uio[3]: "transmission_begin"
+  uio[4]: "neg_edge"
+  uio[5]: "pos_edge"
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
