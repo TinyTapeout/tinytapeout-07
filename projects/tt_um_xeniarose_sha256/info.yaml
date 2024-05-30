@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "tiny sha256"      # Project title
+  author:       "xenia dragon"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "a minimal single-cycle-round sha256 core intended to fit in one tile"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_xeniarose_sha256"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "addressed register bit 0"
+  ui[1]: "addressed register bit 1"
+  ui[2]: "addressed register bit 2"
+  ui[3]: "addressed register bit 3"
+  ui[4]: "addressed register bit 4"
+  ui[5]: "addressed register bit 5"
+  ui[6]: "IO read/write select"
+  ui[7]: "IO clock"
+
+  # Outputs
+  uo[0]: "ready"
+  uo[1]: "IO read/write selected"
+  uo[2]: "todo0"
+  uo[3]: "todo1"
+  uo[4]: "todo2"
+  uo[5]: "todo3"
+  uo[6]: "todo4"
+  uo[7]: "todo5"
+
+  # Bidirectional pins
+  uio[0]: "data bit 0"
+  uio[1]: "data bit 1"
+  uio[2]: "data bit 2"
+  uio[3]: "data bit 3"
+  uio[4]: "data bit 4"
+  uio[5]: "data bit 5"
+  uio[6]: "data bit 6"
+  uio[7]: "data bit 7"
+
+# Do not change!
+yaml_version: 6
