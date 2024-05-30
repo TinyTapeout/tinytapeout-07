@@ -5,7 +5,7 @@ project:
   discord:      "metzeri"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "A mostly support riscv32i CPU with a bare bones spi wrapper allowing you to upload programs to instruction memory and echo information sent through SPI"      # One line description of what your project does
   language:     "SystemVerilog, TL-Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     50_000_000       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "8x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -15,7 +15,7 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "project.v"
+    - "tt_um_riscv_spi_wrapper.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
