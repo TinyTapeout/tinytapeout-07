@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "LFSR"      # Project title
-  author:       "James Meech"      # Your name
+  author:       "James Meech and Werner Florian"      # Your name
   discord:      "Meechy"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Linear feedback shift register random number generator"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
@@ -22,34 +22,34 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "Wishbone data inputs"
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "Wishbone data input bit 0"
+  ui[1]: "Wishbone data input bit 1"
+  ui[2]: "Wishbone data input bit 2"
+  ui[3]: "Wishbone data input bit 3"
+  ui[4]: "Wishbone data input bit 4"
+  ui[5]: "Wishbone data input bit 5"
+  ui[6]: "Wishbone data input bit 6"
+  ui[7]: "Wishbone data input bit 7"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "Output bit to indicate whether or not the wishbone has stalled (o_wb_stall)"
+  uo[1]: "LFSR output bit (o_wb_data)"
+  uo[2]: "Output bit for the wishbone to acknowledge the successful end of writing part of the LFSR seed (o_wb_ack)"
+  uo[3]: "Not used in this design"
+  uo[4]: "Not used in this design"
+  uo[5]: "Not used in this design"
+  uo[6]: "Not used in this design"
+  uo[7]: "Not used in this design"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "Wishbone input bit to indicate that a valid bus cycle is in progress (i_wb_cyc, hardcoded as an input)"
+  uio[1]: "Wishbone chipselect input bit to indicate a valid seed data transfer cycle (i_wb_stb, hardcoded as an input)"
+  uio[2]: "Wishbone input bit to indicate a read or a write cycle read = 0, write = 1 (i_wb_we, hardcoded as an input)"
+  uio[3]: "Wishbone input address bit zero to select which eight bit byte of the seed to write (i_wb_addr[0])"
+  uio[4]: "Wishbone input address bit one to select which eight bit byte of the seed to write (i_wb_addr[1])"
+  uio[5]: "Wishbone input address bit two to select which eight bit byte of the seed to write (i_wb_addr[2])"
+  uio[6]: "Not used in this design"
+  uio[7]: "Not used in this design"
 
 # Do not change!
 yaml_version: 6
