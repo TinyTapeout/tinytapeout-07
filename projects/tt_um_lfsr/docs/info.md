@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-It is a LFSR.
+It is a linear feedback shift register random number generator connected to a wishbone bus to allow it to fit within the pin constraints of Tiny Tapeout. 
 
 ## How to test
 
-Measure the output bit.
+Please see the cocotb testbench in the test.py in the test directory for the startup procedure for loading a seed and starting the linear feedback shift register output. 
 
 ## External hardware
 
-Something to measure the output bit.
+Use the microcontroller on the development board to apply the correct startup signals to the board.
