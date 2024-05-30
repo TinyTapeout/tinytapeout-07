@@ -11,6 +11,13 @@ You can also include images in this folder and reference them in the markdown. E
 
 This chip decoded the QOA audio format, which is designed to be a simple, portable format for 16 bit PCM audio data. The specification is one page, and is availible at [qoaformat.org](https://qoaformat.org/). The chip communicates through an SPI slave mode 0 interface to a controller chip, which handles the file interface and all adjecent functions. The chip only handles decoding samples into their 16 bit uncompressed versions. 
 
+### Block diagram
+
+![A diagram showing the internal structure of the chip](28add11_QOAdecode_whole.jpg)
+
+The chip itself consists of two main parts, an SPI interface for communication, and the decoder itself. The decoder contains a parser for the SPI data, the LMS predictor/updater at the heart of the QOA format, and the history/weights for the LMS predictor. 
+For die area savings, we use a sequential multiplier in the LMS predictor, and save on the expensive dequantizing computations by using a precalculated table in the [reference code on Github](https://github.com/phoboslab/qoa). This ROM also takes half the size of that in the original code, because half of the values are just their negative counterpart so we just flip the sign.
+
 ## How to test
 
 Connect the chip to a mode 0 SPI master, with a clock rate at least 6x slower than the chip clock. Then, fill the LMS history and weights, by using the following instruction:
@@ -26,15 +33,15 @@ If you want to then send a sample, the following instruction is used:
 
 qr and sf_quant are exactly as they are in the QOA specification, with this chip decoding sample by sample.
 
-After sending the sample, wait (NUMBER) chip clock cycles, then request the sample with the following instruction:
+After sending the sample, wait 40 chip clock cycles, then request the sample with the following instruction:
 | bit[7] | bit[6] | bit[5] | bit[4] | bit[3] | bit[2] | bit[1] | bit[0] |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 |   1    |        |        |        |        |        |        |   0    |
 
 Once you send that instruction, the next two bytes sent by the chip will be the decoded sample, MSB first.
-While you are reciving the sample, you can send any data, but it will be ignored. The chip will send gibberish data when the instruction is not used.
+While you are reciving the sample, you can send any data, but it will be ignored. The chip will send unknown data when the instruction is not used.
 
-Eventually I will get arould to writing firmware on my Github, please look back there for updates.
+Eventually I will get arould to writing code for the interface on [my Github](https://github.com/28add11), please look back there for updates.
 
 ## External hardware
 
