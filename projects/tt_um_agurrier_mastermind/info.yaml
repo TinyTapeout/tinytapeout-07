@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "Mastermind"      # Project title
+  author:       "Tom Gurrieri and Anthony Gurrieri"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Play the game: Mastermind"      # One line description of what your project does
+  language:     "TL-Verilog" # other examples include SystemVerilog, TL-Verilog, Amaranth, VHDL, etc
+  clock_hz:     20000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "3x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_agurrier_mastermind"
+  
+  # List your project's Verilog source files here. (For TL-Verilog (.tlv) sources, list the corresponding (.v) generated Verilog files (which should not be committed to the repo).)
+  # Verilog/TL-Verilog source files must be in ./src and you must list each Verilog source file separately, one per line:
+  source_files:
+    - "project.sv"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Red"
+  ui[1]: "Yellow"
+  ui[2]: "Green"
+  ui[3]: "Blue"
+  ui[4]: "Orange"
+  ui[5]: "Black"
+  ui[6]: "White"
+  ui[7]: "Purple"
+
+  # Outputs
+  uo[0]: "Correct Position 1"
+  uo[1]: "Correct Position 2"
+  uo[2]: "Correct Position 3"
+  uo[3]: "Correct Position 4"
+  uo[4]: "Correct Color 1"
+  uo[5]: "Correct Color 2"
+  uo[6]: "Correct Color 3"
+  uo[7]: "Correct Color 4"
+
+  # Bidirectional pins
+  uio[0]: "unused"
+  uio[1]: "unused"
+  uio[2]: "unused"
+  uio[3]: "unused"
+  uio[4]: "unused"
+  uio[5]: "unused"
+  uio[6]: "unused"
+  uio[7]: "unused"
+
+# Do not change!
+yaml_version: 6
