@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt07 11b2d371",
+  "repo": "https://github.com/urish/tt07-mandelbrot-accelarator",
+  "commit": "3c58c26c65a59dbf473322cdbbb713d4dba923d3",
+  "workflow_url": "https://github.com/urish/tt07-mandelbrot-accelarator/actions/runs/9309801379",
+  "sort_id": 1717142603372,
+  "openlane_version": "OpenLane 337ffbf4749b8bc6e8d8742ed9a595934142198b",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
