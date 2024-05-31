@@ -28,6 +28,24 @@ vco u_vco(
     .out(uo_out[0])
 );
 
+wire qa, qb;
+pfd u_pfd(
+    .VPWR(VPWR),
+    .VGND(VGND),
+    .CLK(ui_in[2]),
+    .REF(ui_in[3]),
+    .QA(qa),
+    .QB(qb)
+);
+
+charge_pump cp(
+    .vdd(VPWR),
+    .vss(VGND),
+    .QA(qa),
+    .QB(qb),
+    .VOUT(ua[1])
+);
+
 assign uo_out[1]  = VGND;
 assign uo_out[2]  = VGND;
 assign uo_out[3]  = VGND;

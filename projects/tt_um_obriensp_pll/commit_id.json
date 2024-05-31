@@ -1,8 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/obriensp/tt07-spo-pll-bits",
-  "commit": "58fe03c26da94ee8e6b3c4ccb6589cf658943b6d",
-  "workflow_url": "https://github.com/obriensp/tt07-spo-pll-bits/actions/runs/9321573577",
+  "commit": "c28541a3fda54407e575c542d1c18e8b34121c91",
+  "workflow_url": "https://github.com/obriensp/tt07-spo-pll-bits/actions/runs/9325203841",
   "sort_id": 1717174386738,
   "analog": true
 }

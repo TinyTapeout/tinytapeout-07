@@ -25,8 +25,8 @@ pinout:
   # Inputs
   ui[0]: "vco0_s0"
   ui[1]: "vco0_s1"
-  ui[2]: ""
-  ui[3]: ""
+  ui[2]: "pfd0_clk"
+  ui[3]: "pfd0_ref"
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
@@ -54,7 +54,7 @@ pinout:
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
   ua[0]: "vco0_vcont"
-  ua[1]: ""
+  ua[1]: "pfd0_vout"
   ua[2]: ""
   ua[3]: ""
   ua[4]: ""
