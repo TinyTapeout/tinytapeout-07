@@ -1,0 +1,25 @@
+
+63. Printing statistics.
+
+=== tt_um_delay_line_tmng ===
+
+   Number of wires:               1783
+   Number of wire bits:           1818
+   Number of public wires:        1761
+   Number of public wire bits:    1796
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1799
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__buf_1         10
+     sky130_fd_sc_hd__conb_1        16
+     sky130_fd_sc_hd__dfxtp_2      896
+     sky130_fd_sc_hd__dlygate4sd3_1    864
+     sky130_fd_sc_hd__mux2_2        11
+     sky130_fd_sc_hd__o21ba_2        1
+
+   Area for cell type \sky130_fd_sc_hd__dlygate4sd3_1 is unknown!
+
+   Chip area for module '\tt_um_delay_line_tmng': 19297.257600
+
