@@ -20,8 +20,9 @@ module tt_um_mos_bandgap (
 );
 
     wire bg_out;
+    wire bg_dtmos_out;
 
-    p3_opamp p3_opamp(
+    p3_opamp p3_opamp_0(
         .PLUS(bg_out),
         .MINUS(ua[0]),
         .VOUT(ua[0]),
@@ -31,6 +32,20 @@ module tt_um_mos_bandgap (
 
     bandgap bandgap(
         .vref(bg_out),
+        .VDD(VPWR),
+        .VSS(VGND)
+        );
+
+    p3_opamp p3_opamp_1(
+        .PLUS(bg_dtmos_out),
+        .MINUS(ua[1]),
+        .VOUT(ua[1]),
+        .VDD(VPWR),
+        .VSS(VGND)
+        );
+
+    bandgap_dtmos bandgap_dtmos(
+        .vref(bg_dtmos_out),
         .VDD(VPWR),
         .VSS(VGND)
         );

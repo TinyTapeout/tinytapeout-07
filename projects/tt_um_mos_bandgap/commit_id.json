@@ -1,8 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/mattvenn/tt07-mos-bandgap",
-  "commit": "f3441791246acee17733fb3114fdcadcb474d595",
-  "workflow_url": "https://github.com/mattvenn/tt07-mos-bandgap/actions/runs/9301748925",
+  "commit": "c4e350e23b19f191f1551d22f127b7387f2975ab",
+  "workflow_url": "https://github.com/mattvenn/tt07-mos-bandgap/actions/runs/9320457745",
   "sort_id": 1716719574645,
   "analog": true
 }
