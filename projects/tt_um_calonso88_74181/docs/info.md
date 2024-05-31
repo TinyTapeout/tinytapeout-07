@@ -90,7 +90,7 @@ cmd = 0x00+addr, addr = 0 ~ 15
 
 ## How to test
 
-Use SPI1 Master peripheral in RP2040 to start communication on SPI interface towards this design. Remember to configure the SPI mode using the switches in DIP switch and configure the SPI mode in the RP2040 accordingly.
+Use SPI1 Master peripheral in RP2040 to start communication on SPI interface towards this design. Remember to configure the SPI mode using the switches in DIP switch (if you'd like to have CPOL=1 and CPHA=1). Alternatively, don't use the DIP switches and use the RP2040 GPIOs to configure the SPI mode in the desired mode.
 
 ## External hardware
 
