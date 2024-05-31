@@ -34,13 +34,13 @@ pinout:
 
   # Outputs
   uo[0]: "unbounded"
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[1]: "iter[0]"
+  uo[2]: "iter[1]"
+  uo[3]: "iter[2]"
+  uo[4]: "iter[3]"
+  uo[5]: "iter[4]"
+  uo[6]: "iter[5]"
+  uo[7]: "iter[6]"
 
   # Bidirectional pins
   uio[0]: "data_in[0]"
