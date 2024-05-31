@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "Modified Booth Multiplier"      # Project title
+  author:       "Varun Chandra Pendyala"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "The proposed design multiplies two 8bit signed numbers using modified booth algorithm"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     100000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_multiplier_mbm"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "multiplicand[0]"
+  ui[1]: "multiplicand[1]"
+  ui[2]: "multiplicand[2]"
+  ui[3]: "multiplicand[3]"
+  ui[4]: "multiplicand[4]"
+  ui[5]: "multiplicand[5]"
+  ui[6]: "multiplicand[6]"
+  ui[7]: "multiplicand[7]"
+
+  # Outputs
+  uo[0]: "product[0]"
+  uo[1]: "product[1]"
+  uo[2]: "product[2]"
+  uo[3]: "product[3]"
+  uo[4]: "product[4]"
+  uo[5]: "product[5]"
+  uo[6]: "product[6]"
+  uo[7]: "product[7]"
+
+  # Bidirectional pins
+  uio[0]: "product[8]"
+  uio[1]: "product[9]"
+  uio[2]: "product[10]"
+  uio[3]: "product[11]"
+  uio[4]: "product[12]"
+  uio[5]: "product[13]"
+  uio[6]: "product[14]"
+  uio[7]: "product[15]"
+
+# Do not change!
+yaml_version: 6
