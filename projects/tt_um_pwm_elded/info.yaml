@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "UACJ_PWM"      # Project title
+  author:       "Grupo C"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Implementacion de un modulador de ancho de pulso (PWM) mediante Verilog esencial en electronica para regular la energia entregada a un dispositivo, este diseño esta bajo los requisitos del sistema"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_pwm_elded"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_pwm_elded.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "duty_[0]"
+  ui[1]: "duty_[1]"
+  ui[2]: "duty_[2]"
+  ui[3]: "duty_[3]"
+  ui[4]: "duty_[4]"
+  ui[5]: "duty_[5]"
+  ui[6]: "duty_[6]"
+  ui[7]: "duty_[7]"
+
+  # Outputs
+  uo[0]: "pwm_o"
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
