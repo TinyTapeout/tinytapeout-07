@@ -1,0 +1,49 @@
+# Tiny Tapeout project information
+project:
+  title:        "fractran-tt"
+  author:       "Jack Leightcap"
+  description:  "Hardware implementation of John Conway's estoeric turing-complete lanugage Fractran"
+  language:     "Clash"
+  clock_hz:     1       # TODO: how to determine max clock rate? or just leave as reasonable minimum?
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  top_module:  "tt_um_jleightcap"
+  
+  source_files:        
+    - "project.v"
+    - "Fractran.v"
+
+pinout:
+  # Inputs
+  ui[0]: "accumulator stream [0]"
+  ui[1]: "accumulator stream [1]"
+  ui[2]: "accumulator stream [2]"
+  ui[3]: "accumulator stream [3]"
+  ui[4]: "accumulator stream [4]"
+  ui[5]: "accumulator stream [5]"
+  ui[6]: "accumulator stream [6]"
+  ui[7]: "accumulator stream [7]"
+
+  # Outputs
+  uo[0]: "factorized stream [0]"
+  uo[1]: "factorized stream [1]"
+  uo[2]: "factorized stream [2]"
+  uo[3]: "factorized stream [3]"
+  uo[4]: "factorized stream [4]"
+  uo[5]: "factorized stream [5]"
+  uo[6]: "factorized stream [6]"
+  uo[7]: "factorized stream [7]"
+
+  # Bidirectional pins, all configured as inputs
+  uio[0]: "fraction stream [0]"
+  uio[1]: "fraction stream [1]"
+  uio[2]: "fraction stream [2]"
+  uio[3]: "fraction stream [3]"
+  uio[4]: "fraction stream [4]"
+  uio[5]: "fraction stream [5]"
+  uio[6]: "fraction stream [6]"
+  uio[7]: "fraction stream [7]"
+
+yaml_version: 6
