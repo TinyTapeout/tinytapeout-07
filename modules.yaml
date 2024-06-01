@@ -26,3 +26,11 @@ modules:
       0: null
     height: 2
     width: 1
+  - name: adennen_inverter
+    x: 3
+    y: 10
+    analog:
+      0: null
+      1: null
+    height: 2
+    width: 1
