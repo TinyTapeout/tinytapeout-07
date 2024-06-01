@@ -10,7 +10,7 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 
 This is the double inverter project from Matt's analog course,
-it's two inverters (one big and one small) connected for form a buffer
+it's two inverters (one big and one small) connected to form a buffer
 
 ## How to test
 
