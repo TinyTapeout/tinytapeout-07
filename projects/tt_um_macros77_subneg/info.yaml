@@ -34,10 +34,10 @@ pinout:
   uo[1]: "SRAM OEn"
   uo[2]: "SRAM WEn"
   uo[3]: "CPU output latch CLK"
-  uo[4]: "Internal CPU state bit 1"
-  uo[5]: "Internal CPU state bit 2"
-  uo[6]: "Internal CPU state bit 3"
-  uo[7]: "Internal CPU state bit 4"
+  uo[4]: "Internal CPU state bit 0"
+  uo[5]: "Internal CPU state bit 1"
+  uo[6]: "Internal CPU state bit 2"
+  uo[7]: "Internal CPU state bit 3"
 
   # Bidirectional pins
   uio[0]: "CPU bi-directional bus"
