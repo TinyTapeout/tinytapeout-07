@@ -13,7 +13,7 @@ PoC of custom hardened macro for fab testing and research purposes. It simply ex
 
 ## How to test
 
-Select one of the two set of matrices using the MAT_SEL input. Compare the observated IN --> OUT mapping using the reference model.
+Select one of the two sets of matrices using the MAT_SEL input. Compare the observated IN --> OUT mapping using the reference model (GDS).
 
 ## External hardware
 
