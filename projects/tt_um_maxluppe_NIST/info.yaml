@@ -1,0 +1,62 @@
+# Tiny Tapeout project information
+project:
+  title:        "Four NIST SP 800-22 tests implementation"      # Project title
+  author:       "Maximiliam Luppe"      # Your name
+  discord:      "maxluppe"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Implementation of the first four NIST statistic tests"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_maxluppe_NIST"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "tt_um_maxluppe_NIST.v"
+    - "NIST_SP_800_22.v"
+    - "NIST01.v"
+    - "NIST02.v"
+    - "NIST03.v"
+    - "NIST04.v"
+    - "NIST_commum.v"
+    - "alfsr.v"
+    - "alfsr_delay_line.v"
+    - "alfsr_modules.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "LFSR Configurator clock"
+  ui[1]: "ALFSR reset"
+  ui[2]: "NIST random bits input"
+  ui[3]: "Operation mode"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "NIST 01 test output"
+  uo[1]: "NIST 02 test output"
+  uo[2]: "NIST 03 test output"
+  uo[3]: "NIST 04 test output"
+  uo[4]: "NIST Global error output"
+  uo[5]: "LFSR Configurator output"
+  uo[6]: "ALFSR _digitalized_ output 3"
+  uo[7]: "ALFSR _analog_ output 3"
+
+  # Bidirectional pins
+  uio[0]: "ALFSR _analog_ output 0"
+  uio[1]: "ALFSR _analog_ output 1"
+  uio[2]: "ALFSR _analog_ output 2"
+  uio[3]: "ALFSR _analog_ output 3"
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
