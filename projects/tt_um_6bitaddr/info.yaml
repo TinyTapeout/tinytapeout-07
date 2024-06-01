@@ -1,0 +1,53 @@
+# Tiny Tapeout project information
+project:
+  title:        "6 bit addr"      # Project title
+  author:       "Nigel Coburn, Jason Murray"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "6 bit addr, with continuous assignment (no clock)"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_6bitaddr"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "0th bit for A input"
+  ui[1]: "1st bit for A input"
+  ui[2]: "2nd bit for A input"
+  ui[3]: "3rd bit for A input"
+  ui[4]: "4th bit for A input"
+  ui[5]: "5th bit for A input"
+  ui[6]: "Input Carry bit"
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "0th bit for A+B"
+  uo[1]: "1st bit for A+B"
+  uo[2]: "2nd bit for A+B"
+  uo[3]: "3rd bit for A+B"
+  uo[4]: "4th bit for A+B"
+  uo[5]: "5th bit for A+B"
+  uo[6]: "Output Carry bit"
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: "0th bit for B input"
+  uio[1]: "1st bit for B input"
+  uio[2]: "2nd bit for B input"
+  uio[3]: "3rd bit for B input"
+  uio[4]: "4th bit for B input"
+  uio[5]: "5th bit for B input"
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
