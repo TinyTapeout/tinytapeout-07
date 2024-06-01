@@ -1,9 +1,8 @@
 {
   "app": "custom_gds action",
   "repo": "https://github.com/smunaut/tt07-diff-rx",
-  "commit": "701678229e9f74e2551e7c93b883a291867b5944",
-  "workflow_url": "https://github.com/smunaut/tt07-diff-rx/actions/runs/9331604745",
+  "commit": "2f22eea19e8ce28e3f56439e4b813dcc45ee1012",
+  "workflow_url": "https://github.com/smunaut/tt07-diff-rx/actions/runs/9332337901",
   "sort_id": 1716919215702,
-  "analog": true,
-  "skip": true
+  "analog": true
 }
