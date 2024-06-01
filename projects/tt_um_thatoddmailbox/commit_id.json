@@ -1,0 +1,9 @@
+{
+  "app": "Tiny Tapeout tt07 11b2d371",
+  "repo": "https://github.com/thatoddmailbox/tt07-duckcpu",
+  "commit": "992fb9af0dd343a175b0bc1f0744e788a7c96e25",
+  "workflow_url": "https://github.com/thatoddmailbox/tt07-duckcpu/actions/runs/9331592520",
+  "sort_id": 1717271727075,
+  "openlane_version": "OpenLane 337ffbf4749b8bc6e8d8742ed9a595934142198b",
+  "pdk_version": "open_pdks cd1748bb197f9b7af62a54507de6624e30363943"
+}
