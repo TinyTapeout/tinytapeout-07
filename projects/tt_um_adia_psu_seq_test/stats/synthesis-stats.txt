@@ -1,0 +1,27 @@
+
+64. Printing statistics.
+
+=== tt_um_adia_psu_seq_test ===
+
+   Number of wires:                 63
+   Number of wire bits:             98
+   Number of public wires:          24
+   Number of public wire bits:      59
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 79
+     sky130_fd_sc_hd__a22o_2        12
+     sky130_fd_sc_hd__and2_2         4
+     sky130_fd_sc_hd__buf_1         22
+     sky130_fd_sc_hd__buf_2          5
+     sky130_fd_sc_hd__conb_1         8
+     sky130_fd_sc_hd__dfrtp_2       10
+     sky130_fd_sc_hd__dfstp_2        2
+     sky130_fd_sc_hd__mux2_2        10
+     sky130_fd_sc_hd__o311a_2        1
+     sky130_fd_sc_hd__or2_2          4
+     sky130_fd_sc_hd__or3b_2         1
+
+   Chip area for module '\tt_um_adia_psu_seq_test': 760.729600
+

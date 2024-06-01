@@ -1,0 +1,45 @@
+project:
+  title: "Adiabatic PSU sequencer test"
+  author: "Chris Pacejo"
+  discord: "colanderman"
+  description: "test of a power supply sequencer for adiabatic circuits"
+  language: "Verilog"
+  clock_hz: 32000000
+
+  tiles: "1x1"
+
+  top_module:  "tt_um_adia_psu_seq_test"
+  
+  source_files:        
+    - "tt_um_adia_psu_seq_test.v"
+    - "psu_sequencer.v"
+
+pinout:
+  ui[0]: "phase select (X)"
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  uo[0]: "selected phase (X)"
+  uo[1]: "phase X step 1"
+  uo[2]: "phase X step 2"
+  uo[3]: "phase X step 3"
+  uo[4]: "phase X step 4"
+  uo[5]: "phase X step 5"
+  uo[6]: "phase X step 6"
+  uo[7]: "phase X step 7"
+
+  uio[0]: "phase 0 step 0"
+  uio[1]: "phase 0 step 8"
+  uio[2]: "phase 1 step 0"
+  uio[3]: "phase 1 step 8"
+  uio[4]: "digital sync phase 0 read"
+  uio[5]: "digital sync phase 1 read"
+  uio[6]: "digital sync phase 0 write"
+  uio[7]: "digital sync phase 1 write"
+
+yaml_version: 6
