@@ -1,0 +1,54 @@
+# Tiny Tapeout project information
+project:
+  title:        "TinyWSPR"      # Project title
+  author:       "asinghani"      # Your name
+  discord:      "anish256"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Tiny WSPR Beacon"      # One line description of what your project does
+  language:     "Chisel" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_asinghani_tinywspr"
+  
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:        
+    - "project.v"
+    - "TopLevel.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "Config valid"
+  ui[1]: "Config start"
+  ui[2]: "RF start transmit"
+  ui[3]: "unused"
+  ui[4]: "unused"
+  ui[5]: "unused"
+  ui[6]: "unused"
+  ui[7]: "unused"
+
+  # Outputs
+  uo[0]: "RF out"
+  uo[1]: "RF out (mirror)"
+  uo[2]: "unused"
+  uo[3]: "unused"
+  uo[4]: "unused"
+  uo[5]: "unused"
+  uo[6]: "Debug out"
+  uo[7]: "Debug out"
+
+  # Bidirectional pins
+  uio[0]: "config[0]"
+  uio[1]: "config[1]"
+  uio[2]: "config[2]"
+  uio[3]: "config[3]"
+  uio[4]: "config[4]"
+  uio[5]: "config[5]"
+  uio[6]: "config[6]"
+  uio[7]: "config[7]"
+
+# Do not change!
+yaml_version: 6
