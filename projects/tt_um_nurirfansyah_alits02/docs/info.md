@@ -12,7 +12,6 @@ You can also include images in this folder and reference them in the markdown. E
 This tinytapeout submission consists of:
 1. A VCO based on transmission gates with additional on-chip capacitors to further linearize the response.
 2. A phase detector and VCO to form parts of a PLL.
-3. Basic CMOS Opamp
 
 ## How to test
 
@@ -20,22 +19,19 @@ Pinouts:
 
 Analog pins:
 
-ua[0] - VCO (PLL) output
+ua[0] - VCO #1 output
 
-ua[1] - Opamp input (+) / Phase Detector (PLL) ref
+ua[1] - VCO#1 VCONT- / Phase Detector (PLL) ref
 
-ua[2] - Opamp input (+) / Phase Detector (PLL) input / PLL feedback
+ua[2] - VCO#1 VCONT+ / Phase Detector (PLL) input / PLL feedback
 
-ua[3] - Opamp output
+ua[3] - PLL VCO output
 
-ua[4] - PLL Filter + / VCO#1 control input voltage (-) 
+ua[4] - PLL Filter (n)  
 
-ua[5] - PLL Filter - / VCO#1 control input voltage (+)
+ua[5] - PLL Filter (p)
 
-Digital pins:
-
-o[0] - VCO#1 output
 
 ## External hardware
 
-To test, typical experimental setup to test opamp, pll, or vco, would be required.
+To test, typical experimental setup to test pll, or vco, would be required.
