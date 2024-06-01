@@ -1,0 +1,182 @@
+
+64. Printing statistics.
+
+=== Digital_Analog ===
+
+   Number of wires:                 50
+   Number of wire bits:             50
+   Number of public wires:          26
+   Number of public wire bits:      26
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 40
+     Digital_DAC                     2
+     NAND_Comparator_AO22            1
+     NAND_Comparator_MUX21_NI        1
+     NAND_Comparator_NAND02          1
+     sky130_fd_sc_hd__a21o_2         2
+     sky130_fd_sc_hd__a21oi_2        2
+     sky130_fd_sc_hd__a22o_2         1
+     sky130_fd_sc_hd__and2_2         1
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and3_2         4
+     sky130_fd_sc_hd__and4b_2        1
+     sky130_fd_sc_hd__buf_1          3
+     sky130_fd_sc_hd__dfrtp_2       10
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand3_2        1
+     sky130_fd_sc_hd__nor2_2         2
+     sky130_fd_sc_hd__o2bb2a_2       1
+     sky130_fd_sc_hd__xnor2_2        1
+     sky130_fd_sc_hd__xor2_2         4
+
+   Area for cell type \Digital_DAC is unknown!
+   Area for cell type \NAND_Comparator_NAND02 is unknown!
+   Area for cell type \NAND_Comparator_AO22 is unknown!
+   Area for cell type \NAND_Comparator_MUX21_NI is unknown!
+
+   Chip area for module '\Digital_Analog': 502.982400
+
+=== Digital_DAC ===
+
+   Number of wires:                  3
+   Number of wire bits:              7
+   Number of public wires:           2
+   Number of public wire bits:       6
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  8
+     sky130_fd_sc_hd__conb_1         1
+     sky130_fd_sc_hd__nand2_1        2
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__nand2_4        1
+     sky130_fd_sc_hd__nand2_8        3
+
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+
+   Chip area for module '\Digital_DAC': 81.328000
+
+=== NAND_Comparator_AO22 ===
+
+   Number of wires:                  9
+   Number of wire bits:              9
+   Number of public wires:           9
+   Number of public wire bits:       9
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     sky130_fd_sc_hd__a22o_1         2
+     sky130_fd_sc_hd__clkbuf_1       1
+     sky130_fd_sc_hd__clkinv_1       1
+     sky130_fd_sc_hd__nand2_1        2
+
+   Area for cell type \sky130_fd_sc_hd__a22o_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__clkbuf_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__clkinv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+
+=== NAND_Comparator_MUX21_NI ===
+
+   Number of wires:                  8
+   Number of wire bits:              8
+   Number of public wires:           8
+   Number of public wire bits:       8
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  5
+     sky130_fd_sc_hd__clkbuf_1       1
+     sky130_fd_sc_hd__mux2_1         2
+     sky130_fd_sc_hd__nand2_1        2
+
+   Area for cell type \sky130_fd_sc_hd__clkbuf_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+
+   Chip area for module '\NAND_Comparator_MUX21_NI': 22.521600
+
+=== NAND_Comparator_NAND02 ===
+
+   Number of wires:                 13
+   Number of wire bits:             13
+   Number of public wires:          13
+   Number of public wire bits:      13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 10
+     sky130_fd_sc_hd__clkbuf_1       1
+     sky130_fd_sc_hd__clkinv_1       1
+     sky130_fd_sc_hd__nand2_1        8
+
+   Area for cell type \sky130_fd_sc_hd__clkbuf_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__clkinv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+
+=== tt_um_maxluppe_digital_analog ===
+
+   Number of wires:                  8
+   Number of wire bits:             43
+   Number of public wires:           8
+   Number of public wire bits:      43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 17
+     Digital_Analog                  1
+     sky130_fd_sc_hd__conb_1        16
+
+   Area for cell type \Digital_Analog is unknown!
+
+   Chip area for module '\tt_um_maxluppe_digital_analog': 60.057600
+
+=== design hierarchy ===
+
+   tt_um_maxluppe_digital_analog      1
+     Digital_Analog                  1
+       Digital_DAC                   2
+       NAND_Comparator_AO22          1
+       NAND_Comparator_MUX21_NI      1
+       NAND_Comparator_NAND02        1
+
+   Number of wires:                 94
+   Number of wire bits:            137
+   Number of public wires:          68
+   Number of public wire bits:     111
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 88
+     sky130_fd_sc_hd__a21o_2         2
+     sky130_fd_sc_hd__a21oi_2        2
+     sky130_fd_sc_hd__a22o_1         2
+     sky130_fd_sc_hd__a22o_2         1
+     sky130_fd_sc_hd__and2_2         1
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and3_2         4
+     sky130_fd_sc_hd__and4b_2        1
+     sky130_fd_sc_hd__buf_1          3
+     sky130_fd_sc_hd__clkbuf_1       3
+     sky130_fd_sc_hd__clkinv_1       2
+     sky130_fd_sc_hd__conb_1        18
+     sky130_fd_sc_hd__dfrtp_2       10
+     sky130_fd_sc_hd__mux2_1         2
+     sky130_fd_sc_hd__mux2_2         1
+     sky130_fd_sc_hd__nand2_1       16
+     sky130_fd_sc_hd__nand2_2        2
+     sky130_fd_sc_hd__nand2_4        2
+     sky130_fd_sc_hd__nand2_8        6
+     sky130_fd_sc_hd__nand3_2        1
+     sky130_fd_sc_hd__nor2_2         2
+     sky130_fd_sc_hd__o2bb2a_2       1
+     sky130_fd_sc_hd__xnor2_2        1
+     sky130_fd_sc_hd__xor2_2         4
+
+   Area for cell type \sky130_fd_sc_hd__clkbuf_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__clkinv_1 is unknown!
+   Area for cell type \sky130_fd_sc_hd__nand2_1 is unknown!
+
+   Chip area for top module '\tt_um_maxluppe_digital_analog': 748.217600
+
