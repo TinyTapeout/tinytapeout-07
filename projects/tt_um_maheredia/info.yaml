@@ -42,7 +42,7 @@ pinout:
   uo[1]: "cos_out - Cosine output with CA+msg modulation (no noise)."
   uo[2]: "noise_start_out - Start of PRNG sequence used as noise."
   uo[3]: "start_out - Start of GPS signal. This output goes high when the configured phase matches the actual phase of the output signal."
-  uo[4]: "Not used"
+  uo[4]: "clk - Output clock"
   uo[5]: "Not used"
   uo[6]: "Not used"
   uo[7]: "Not used"
