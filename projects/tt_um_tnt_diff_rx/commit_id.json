@@ -4,5 +4,6 @@
   "commit": "701678229e9f74e2551e7c93b883a291867b5944",
   "workflow_url": "https://github.com/smunaut/tt07-diff-rx/actions/runs/9331604745",
   "sort_id": 1716919215702,
-  "analog": true
+  "analog": true,
+  "skip": true
 }
