@@ -1,0 +1,30 @@
+
+67. Printing statistics.
+
+=== tt_um_cm_1 ===
+
+   Number of wires:                 48
+   Number of wire bits:             83
+   Number of public wires:          24
+   Number of public wire bits:      59
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 52
+     custom_matrix_1                 1
+     custom_matrix_2                 1
+     custom_matrix_3                 1
+     custom_matrix_4                 1
+     sky130_fd_sc_hd__and2_2         8
+     sky130_fd_sc_hd__buf_1          8
+     sky130_fd_sc_hd__conb_1        16
+     sky130_fd_sc_hd__dfxtp_2        8
+     sky130_fd_sc_hd__mux2_2         8
+
+   Area for cell type \custom_matrix_1 is unknown!
+   Area for cell type \custom_matrix_2 is unknown!
+   Area for cell type \custom_matrix_3 is unknown!
+   Area for cell type \custom_matrix_4 is unknown!
+
+   Chip area for module '\tt_um_cm_1': 410.393600
+
