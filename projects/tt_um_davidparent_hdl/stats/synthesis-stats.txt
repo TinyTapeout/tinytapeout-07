@@ -1,0 +1,42 @@
+
+63. Printing statistics.
+
+=== tt_um_davidparent_hdl ===
+
+   Number of wires:                506
+   Number of wire bits:            541
+   Number of public wires:         221
+   Number of public wire bits:     256
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                522
+     sky130_fd_sc_hd__a211o_2        2
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21o_2         2
+     sky130_fd_sc_hd__a21oi_2        3
+     sky130_fd_sc_hd__a221o_2        1
+     sky130_fd_sc_hd__a2bb2o_2       1
+     sky130_fd_sc_hd__a32o_2         1
+     sky130_fd_sc_hd__and2_2         5
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and3b_2        1
+     sky130_fd_sc_hd__and4_2         1
+     sky130_fd_sc_hd__buf_1         26
+     sky130_fd_sc_hd__buf_2          7
+     sky130_fd_sc_hd__conb_1        16
+     sky130_fd_sc_hd__dfrtp_2       20
+     sky130_fd_sc_hd__dfstp_2      193
+     sky130_fd_sc_hd__inv_2        222
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__o2111a_2       1
+     sky130_fd_sc_hd__o211a_2        1
+     sky130_fd_sc_hd__o221a_2        1
+     sky130_fd_sc_hd__o22a_2         3
+     sky130_fd_sc_hd__o2bb2a_2       1
+     sky130_fd_sc_hd__or2b_2         6
+     sky130_fd_sc_hd__xnor2_2        3
+     sky130_fd_sc_hd__xor2_2         2
+
+   Chip area for module '\tt_um_davidparent_hdl': 7012.976000
+
