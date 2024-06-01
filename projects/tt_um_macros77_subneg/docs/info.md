@@ -9,8 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Implementation of simple SUBNEG CPU executing built-in trivial program (countdown from 255 to 0).
+Implementation of a simple 8-bit SUBNEG CPU. The CPU interfaces to external SRAM memory through address output latch. CPU output can be implemented using a second output latch. The program to be executed has to be written to the SRAM by external means (e.g. a microcontroller) prior to setting CPU enable pin high. 3 inputs are provided for this purpose (CPU enable, External SRAM address latch CLK, External SRAM WEn).
 
 ## External hardware
 
-Device capable of displaying 8-bit value. 
+3.3V SRAM memory (e.g. AS6C6264).
+Memory address latch (e.g. 74HC574).
+CPU output latch (e.g. 74HC574).
+Device capable of displaying 8-bit output value. 
