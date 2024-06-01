@@ -23,8 +23,8 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "bias_sel"
-  ui[1]: "debug"
+  ui[0]: "debug"
+  ui[1]: "bias_sel"
   ui[2]: ""
   ui[3]: ""
   ui[4]: ""
@@ -53,10 +53,10 @@ pinout:
   uio[7]: "q[15]"
 
   # Analog pins
-  ua[0]: "clk_p"
-  ua[1]: "clk_n"
-  ua[2]: "data_p"
-  ua[3]: "data_n"
+  ua[0]: "clk_n"
+  ua[1]: "clk_p"
+  ua[2]: "data_n"
+  ua[3]: "data_p"
   ua[4]: "ibias"
   ua[5]: ""
 
