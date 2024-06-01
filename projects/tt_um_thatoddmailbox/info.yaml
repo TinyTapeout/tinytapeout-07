@@ -1,0 +1,64 @@
+# Tiny Tapeout project information
+project:
+  title:        "DuckCPU"      # Project title
+  author:       "Alex Studer"      # Your name
+  discord:      "alex_studer"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Small System-on-Chip based around a custom 8-bit CPU."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_thatoddmailbox"
+
+  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
+  source_files:
+    - "alu.v"
+    - "bootloader.v"
+    - "cpu_decoder.v"
+    - "cpu.v"
+    - "gpio_wrapper.v"
+    - "mem_ctrl.v"
+    - "project.v"
+    - "soc.v"
+    - "spi_core.v"
+    - "spi_wrapper.v"
+    - "uart_core.v"
+    - "uart_wrapper.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: ""
+  ui[1]: ""
+  ui[2]: ""
+  ui[3]: ""
+  ui[4]: "bootsel"
+  ui[5]: "spi0_miso"
+  ui[6]: "rspi_miso"
+  ui[7]: "uart0_rx"
+
+  # Outputs
+  uo[0]: "rspi_clk"
+  uo[1]: "rspi_mosi"
+  uo[2]: "rspi_flash_ce_n"
+  uo[3]: "rspi_ram_ce_n"
+  uo[4]: "uart0_tx"
+  uo[5]: "spi0_clk"
+  uo[6]: "spi0_mosi"
+  uo[7]: "spi0_ce_n"
+
+  # Bidirectional pins
+  uio[0]: "gpio0_data[0]"
+  uio[1]: "gpio0_data[1]"
+  uio[2]: "gpio0_data[2]"
+  uio[3]: "gpio0_data[3]"
+  uio[4]: "gpio0_data[4]"
+  uio[5]: "gpio0_data[5]"
+  uio[6]: "gpio0_data[6]"
+  uio[7]: "gpio0_data[7]"
+
+# Do not change!
+yaml_version: 6
