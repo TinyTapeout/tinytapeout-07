@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
   title:        "Analog Test Circuit ITS 2"      # Project title
-  author:       "Astria Nur Irfansyah"      # Your name
+  author:       "A. N Irfansyah, Raditya Eka, Yohanes Stefanus"      # Your name
   discord:      "irfansyah_99806"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "VCO"      # One line description of what your project does
+  description:  "PLL parts (VCO and phase detector)"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -53,12 +53,12 @@ pinout:
   uio[7]: ""
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: "in0"
-  ua[1]: "in1"
-  ua[2]: "in2"
-  ua[3]: "out1"
-  ua[4]: "out2"
-  ua[5]: "out3"
+  ua[0]: "vco1_out"
+  ua[1]: "vco1_in-"
+  ua[2]: "vco1_in+"
+  ua[3]: "pllvco_out"
+  ua[4]: "pllfilter_n"
+  ua[5]: "pllfilter_p"
 
 # Do not change!
 yaml_version: 6
