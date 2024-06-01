@@ -18,3 +18,11 @@ modules:
       3: null
       4: null
       5: null
+# Art containing modules that need to be carefully placed so they don't get flipped/mirrored:
+  - name: urish_charge_pump
+    x: 1
+    y: 10
+    analog:
+      0: null
+    height: 2
+    width: 1
