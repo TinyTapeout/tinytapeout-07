@@ -36,6 +36,7 @@ MACRO tt_um_htfab_fprn
   PIN ua[0]
     DIRECTION INOUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 28.709999 ;
     PORT
       LAYER met4 ;
         RECT 156.410 0.000 157.310 1.000 ;
@@ -22550,8 +22551,10 @@ MACRO tt_um_htfab_fprn
         RECT 95.645 2.205 97.600 2.225 ;
         RECT 121.070 2.205 123.025 2.225 ;
         RECT 146.495 2.205 148.450 2.225 ;
+        RECT 48.680 0.950 49.580 0.995 ;
         RECT 156.435 0.950 157.285 0.970 ;
         RECT 48.680 0.050 157.310 0.950 ;
+        RECT 48.680 0.005 49.580 0.050 ;
         RECT 156.435 0.030 157.285 0.050 ;
       LAYER met3 ;
         RECT 21.400 224.300 93.005 225.300 ;
