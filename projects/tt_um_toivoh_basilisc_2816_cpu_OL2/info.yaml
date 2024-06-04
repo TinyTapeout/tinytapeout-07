@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Basilisc-2816"      # Project title
+  title:        "Basilisc-2816 v0.1b CPU"      # Project title
   author:       "Toivo Henningsson"      # Your name
   discord:      "possible_realities"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Small 2-bit serial 8/16 bit CPU"      # One line description of what your project does
@@ -15,10 +15,12 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
+    - "delay_buffer.v"
     - "regfile.v"
     - "alu.v"
     - "scheduler.v"
     - "decoder.v"
+    - "latch_register.v"
     - "fifos.v"
     - "sb_io.v"
     - "mem_interface.v"

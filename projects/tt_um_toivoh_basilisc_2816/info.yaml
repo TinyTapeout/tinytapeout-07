@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Basilisc-2816"      # Project title
+  title:        "Basilisc-2816 v0.1a CPU"      # Project title
   author:       "Toivo Henningsson"      # Your name
   discord:      "possible_realities"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Small 2-bit serial 8/16 bit CPU"      # One line description of what your project does
@@ -42,7 +42,7 @@ pinout:
   uo[0]: "tx_out[0]"
   uo[1]: "tx_out[1]"
   uo[2]: "tx_fetch"
-  uo[3]: ""
+  uo[3]: "tx_jump"
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
