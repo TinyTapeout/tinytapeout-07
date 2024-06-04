@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Aron's analog buffer test"      # Project title
+  title:        "Analog buffer test"      # Project title
   author:       "Aron Dennen"      # Your name
   discord:      "arond81"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Double inverter project from Matt's analog course"      # One line description of what your project does
