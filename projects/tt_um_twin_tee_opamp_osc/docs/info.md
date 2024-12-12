@@ -50,3 +50,11 @@ So you should also see the most significant bit flashing every ~6 seconds.
 ## External hardware
 
 Oscilloscope.
+
+## Silicon results
+
+The measurement was made with a Keysight HD3 scope. The design is very sensitive to loading, so a scope probe was connected direct to the pad (after removing the pulldown).
+
+![measurement](silicon_measurement.png)
+
+The frequency was measured at 4.6MHz, which is 26% slower than anticipated. You can also see the wave is less sinusoidal than simulated. This is most likely related to how sensitive the design is to loading. For a future version, I will use an opamp with a stronger output stage. 
