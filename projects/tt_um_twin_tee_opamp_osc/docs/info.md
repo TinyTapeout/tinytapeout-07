@@ -57,4 +57,4 @@ The measurement was made with a Keysight HD3 scope. The design is very sensitive
 
 ![measurement](silicon_measurement.png)
 
-The frequency was measured at 4.6MHz, which is 26% slower than anticipated. You can also see the wave is less sinusoidal than simulated. This is most likely related to how sensitive the design is to loading. For a future version, I will use an opamp with a stronger output stage. 
+The frequency was measured at 4.67MHz, which is 26% slower than anticipated. You can also see the wave is less sinusoidal than simulated. This is most likely related to how sensitive the design is to loading. For a future version, I will use an opamp with a stronger output stage. 
