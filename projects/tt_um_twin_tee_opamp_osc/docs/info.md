@@ -47,7 +47,7 @@ This simulation includes extracted parastitics and a model of the pin.
 After the project is enabled, you should see a sine wave at around 4.93MHz on analog output pin 0.
 
 There is also a 20 bit digital counter connected to the oscillator output. The top 8 bits are connected to the LEDs.
-So you should also see the most significant bit flashing every ~4.7 seconds.
+So you should also see the most significant bit (the dot) flashing about 5 times per second.
 
 ## External hardware
 
