@@ -32,7 +32,9 @@ as the resistance and transistors change across process corners. Each run is sho
 in the Twin Tee filter is too high, the oscillations quickly die out, so it's deliberately undersized at the expense of
 distortion in the sine wave.
 
-![Twin Tee output transient analysis](twin_trans.png)
+This simulation includes extracted parastitics and a model of the pin.
+
+![Twin Tee output transient analysis](twin_out_parax.png)
 
 ## Acknowledgements
 
@@ -42,10 +44,10 @@ distortion in the sine wave.
 
 ## How to test
 
-After the project is enabled, you should see a sine wave at around 6.3MHz on analog output pin 0.
+After the project is enabled, you should see a sine wave at around 4.93MHz on analog output pin 0.
 
 There is also a 20 bit digital counter connected to the oscillator output. The top 8 bits are connected to the LEDs.
-So you should also see the most significant bit flashing every ~6 seconds.
+So you should also see the most significant bit flashing every ~4.7 seconds.
 
 ## External hardware
 
@@ -57,4 +59,4 @@ The measurement was made with a Keysight HD3 scope. The design is very sensitive
 
 ![measurement](silicon_measurement.png)
 
-The frequency was measured at 4.67MHz, which is 26% slower than anticipated. You can also see the wave is less sinusoidal than simulated. This is most likely related to how sensitive the design is to loading. For a future version, I will use an opamp with a stronger output stage. 
+The frequency was measured at 4.67MHz, which is about 5% slower than anticipated.
