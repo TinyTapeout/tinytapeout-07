@@ -13,3 +13,6 @@
 #    level: medium
 #    reason: 'The project shorts the power rails when the "addi x0, x0, 0xdeadbeef" instruction is executed.'
 # ```
+tt_um_htfab_fprn:
+  level: medium
+  reason: 'Should be used with a bring-up script that preloads a safe configuration. Otherwise it can power up in an unknown state and may short some digital inputs (including clk & rst_n).'
