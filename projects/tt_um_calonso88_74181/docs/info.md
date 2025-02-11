@@ -77,6 +77,23 @@ cmd = 0x80+addr, addr = 0 ~ 7
     CS:     1  |   0  |      0     |      0     |      0     |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |  1
 ```
 
+Wavedrom for Write data transfer:
+```wavedrom
+{signal: [
+  {name: 'spi_cs', wave: '10................1'},
+  {name: 'spi_clk', wave: '0.P..............P0'},
+  {name: 'spi_mosi', wave: 'z1x..333344444444zz', data: ['Addr[3]', 'Addr[2]', 'Addr[1]', 'Addr[0]', 'Data[7]', 'Data[6]', 'Data[5]', 'Data[4]', 'Data[3]', 'Data[2]', 'Data[1]', 'Data[0]']},
+  {name: 'spi_miso', wave: '0..................'}],
+head: {text:
+  ['tspan',
+    ['tspan', {class:'error h3'}, 'Write transfer '],
+  ]
+},
+config: { hscale: 2 },
+}
+```
+
+
 * Read data
 cmd = 0x00+addr, addr = 0 ~ 15
 
@@ -87,10 +104,47 @@ cmd = 0x00+addr, addr = 0 ~ 15
     CS:   1  |   0  |      0     |      0     |      0     |    0    |    0    |    0    |    0    |       0       |       0       |       0       |       0       |       0       |       0       |       0       |       0       |  1
 ```
 
+Wavedrom for Read data transfer:
+```wavedrom
+{signal: [
+  {name: 'spi_cs', wave: '10................1'},
+  {name: 'spi_clk', wave: '0.P..............P0'},
+  {name: 'spi_mosi', wave: 'z0x..3333xxxxxxxxzz', data: ['Addr[3]', 'Addr[2]', 'Addr[1]', 'Addr[0]']},
+  {name: 'spi_miso', wave: 'z0.......33333333zz', data: ['Data[7]', 'Data[6]', 'Data[5]', 'Data[4]', 'Data[3]', 'Data[2]', 'Data[1]', 'Data[0]']}],
+head: {text:
+  ['tspan',
+    ['tspan', {class:'error h3'}, 'Read transfer '],
+  ]
+},
+config: { hscale: 2 },
+}
+```
 
 ## How to test
 
 Use SPI1 Master peripheral in RP2040 to start communication on SPI interface towards this design. Remember to configure the SPI mode using the switches in DIP switch (if you'd like to have CPOL=1 and CPHA=1). Alternatively, don't use the DIP switches and use the RP2040 GPIOs to configure the SPI mode in the desired mode.
+
+Example code to initialize SPI in REPL:
+```txt
+spi_miso = tt.pins.pin_uio3
+spi_cs = tt.pins.pin_uio4
+spi_clk = tt.pins.pin_uio5
+spi_mosi = tt.pins.pin_uio6
+spi_miso.init(spi_miso.IN, spi_miso.PULL_DOWN)
+spi_cs.init(spi_cs.OUT)
+spi_clk.init(spi_clk.OUT)
+spi_mosi.init(spi_mosi.OUT)
+spi = machine.SoftSPI(baudrate=10000, polarity=0, phase=0, bits=8, firstbit=machine.SPI.MSB, sck=spi_clk, mosi=spi_mosi, miso=spi_miso)
+spi_cs(1)
+```
+Example code to Write to Addres[0] Data 0xA5:
+```txt
+spi_cs(0); spi.write(b'\x80\xa5'); spi_cs(1)
+```
+Example code to Read from Addres[12]:
+```txt
+spi_cs(0); spi.write(b'\x0C'); spi.read(1); spi_cs(1)
+```
 
 ## External hardware
 
