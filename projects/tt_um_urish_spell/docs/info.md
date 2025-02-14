@@ -71,8 +71,8 @@ When `load` is high, the value from the shift register is loaded into the select
 For example, if you want to read the value of the program counter (PC), you would:
 
 1. Set `reg_sel` to 0x00 and set `dump` to 1
-3. Wait for two clock cycles for the first bit (MSB) to appear on `shift_out`.
-4. Read the remaining bits from `shift_out` on each clock cycle.
+2. Wait for two clock cycles for the first bit (MSB) to appear on `shift_out`.
+3. Read the remaining bits from `shift_out` on each clock cycle.
 
 To write a value to the program counter, you would:
 
@@ -150,3 +150,7 @@ And of course, the obligatory blink, rapidly blinking an LED connected to the `u
 ## External hardware
 
 None
+
+## Errata
+
+When reseting the chip, bytes 0-3 and 128-131 of the program memory are not reset to `0xFF`, and retain their values from the last program loaded (or a random value on power-up). All other program memory bytes are reset to `0xFF`, as expected. This happens due to a timing issue with the DFFRAM write operation that affects the first word of each program memory bank.
