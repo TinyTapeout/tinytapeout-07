@@ -25,6 +25,37 @@ The following graph shows the input clock, the intermediate voltages at the outp
 
 ![output voltage and intermediate voltages](sim_graph_stages.png)
 
+## Silicon measurements
+
+The output voltage on `ua[0]` was measured with a digital multimeter that has a 7.8MΩ input impedance, at various clock frequencies. The following table summarizes the results:
+
+| Input Frequency (KHz) | ua[0] Voltage | Charge Pump Voltage \* |
+|-----------------------|---------------|------------------------|
+| 0                     | 0.065         | 0.130                  |
+| 10                    | 0.236         | 0.472                  |
+| 50                    | 0.643         | 1.286                  |
+| 100                   | 1.006         | 2.012                  |
+| 250                   | 1.524         | 3.048                  |
+| 500                   | 1.862         | 3.724                  |
+| 1000                  | 2.091         | 4.182                  |
+| 2000                  | 2.213         | 4.426                  |
+| 5000                  | 2.271         | 4.542                  |
+| 7500                  | 2.276         | 4.552                  |
+| 10000                 | 2.274         | 4.548                  |
+| 15000                 | 2.265         | 4.530                  |
+| 20000                 | 2.254         | 4.508                  |
+| 40000                 | 2.190         | 4.380                  |
+| 62000                 | 2.086         | 4.172                  |
+| 100000                | 1.768         | 3.536                  |
+
+\* The charge pump voltage is the ua[0] voltage measurement multiplied by 2. This is because the analog pin voltage is limited to 3.3 V, so the charge pump voltage is divided by 2.
+
+The following graph shows the output voltage as a function of the input frequency:
+
+![output voltage vs frequency](silicon_graph.png)
+
+Overall, it seems that the charge pump works as expected, with the output voltage peaking at around 4.55 V when the input frequency is in the 5-10 MHz range.
+
 ## Project layout
 
 ![Project layout](layout.png)
