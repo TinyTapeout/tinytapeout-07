@@ -13,23 +13,17 @@ This is Ben Eater's 8 Bit computer on an ASIC!
 
 All credit for the design, amazing instructional videos, and diagams below goes to Ben Eater.
 
-![overview-with-chip-descriptions1](https://github.com/jasonkaufmann/ice40FPGAProjects/assets/41923667/0995715c-218d-4779-85be-36083b9d3e90)
+![Overview with chip descriptions](images/1.jpg)
 
 ## High level overview
 
 Full Computer Schematic:
-![high_level_diagram](https://github.com/jasonkaufmann/ice40FPGAProjects/assets/41923667/f122dd7a-d9fc-4a3f-b961-beee40d9fa35)
+![High level diagram](images/2.jpg)
 
 Simple Control Signal Diagram:
-![simple_diagram](https://github.com/jasonkaufmann/ice40FPGAProjects/assets/41923667/25b4c402-da54-4372-9458-7b1f4c095c3a)
+![Simple diagram](images/3.jpg)
 
 *Note: The output register and logic to display the digits is not included on the ASIC. The 8 bit output value is put on the bus and the "output register in" control signal (oi) is on an output pin. This way you can use the data bus as a general purpose interface to any display you want. (i.e. you can read in the data to the RP2040 and show it on the screen, you can build the actual output register as shown in the videos and connect it to the PMOD header, etc.)
-
-ASIC 2D:
-![asic](https://github.com/jasonkaufmann/ice40FPGAProjects/assets/41923667/75a44e3f-531d-49fc-af93-cacfedb2afdd)
-
-ASIC 3D:
-![asic_3d](https://github.com/jasonkaufmann/ice40FPGAProjects/assets/41923667/da51dff7-3b9d-46f9-a9b1-e6c4dc9bc3e7)
 
 # How to test
 
