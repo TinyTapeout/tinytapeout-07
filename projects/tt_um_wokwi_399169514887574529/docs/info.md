@@ -11,7 +11,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 This filter receives nine 4-bit pixels in a free-running shift register and performs a gaussian blur, returning the value of the middle pixel. The weights are as shown below.
 
-![0 _9K4Upm5p0aBIKDS](https://github.com/ChipUSM/tt07-wokwi-gaussian-blur/assets/39561772/dc088bd7-366c-4517-bd2d-39de6a550089)
+![](images/1.png)
 
 ## How to test
 
