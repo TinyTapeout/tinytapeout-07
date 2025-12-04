@@ -24,7 +24,7 @@ RP2040 SPI1 is used to communicate with the device. Map SPI1 IOs to GPIOs 24 to 
 
 ## Limitations on SPI:
  - Single register access per SPI transaction.
- - SPI transaction is limited to 16 bits transfer at a time (Addr + Data). Please refer to [Protocol](#protocol) for timing diagrams.
+ - SPI transaction is limited to 16 bits transfer at a time (Addr + Data). Please refer to protocol section for timing diagrams.
  - Design tested for 8 configuration registers + 8 status registers.
  - Even though the number of configuration registers and status registers is configurable, design only supports equal number of configuration and status registers for now.
  - Writes targeting Read Only address are dropped, i.e., no configuration registers gets updated.
@@ -145,7 +145,3 @@ Example code to Read from Addres[12]:
 ```txt
 spi_cs(0); spi.write(b'\x0C'); spi.read(1); spi_cs(1)
 ```
-
-## External hardware
-
-Not required.
