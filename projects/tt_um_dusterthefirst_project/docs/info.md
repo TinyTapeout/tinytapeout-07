@@ -13,7 +13,7 @@ There are 2 state machines. One to decode the manchester encoded signal, and the
 other to parse the data frames. For the manchester decoding aspect, the following
 state machine is implemented.
 
-![State Diagram](./elaborated.svg)
+![State Diagram](./elaborated.png)
 
 Blue text are side effects of the transitions. $N_s$ is a counter that increments
 while in each state, and is reset on each state transition.
