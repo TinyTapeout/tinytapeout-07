@@ -17,16 +17,6 @@ datasheet_config:
     - {id: TT_POCA_01_H, rotate: -90deg}
     - {id: TT_POCA_01_I, rotate: 90deg}
 
-  disabled:
-    - tt_um_pwm_elded
-    - tt_um_wokwi_399169514887574529
-    - tt_um_afasolino
-    - tt_um_neural_network
-    - tt_um_eater_8bit
-    - tt_um_calonso88_74181
-    - tt_um_dvxf_dj8v_dac
-    - tt_um_maheredia
-    - tt_um_dusterthefirst_project
 
   include:
     - docs/chip_map.typ
