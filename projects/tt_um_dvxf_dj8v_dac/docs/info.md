@@ -7,7 +7,7 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
-# How it works
+## How it works
 
 DJ8 is a 8-bit CPU featuring:
 * 8 x 8-bit register file
@@ -22,7 +22,7 @@ Other implementations:
 - [TT06 DJ8 8-bit CPU - VHDL](https://github.com/dvxf/tt06-dj8)
 - [TTIHP0P2 DJ8 8-bit CPU (no DAC) - Verilog](https://github.com/dvxf/ttiph0p2-dj8v)
 
-## Memory Map
+### Memory Map
 
 | From | To | Description
 |--|--|--|
@@ -30,14 +30,15 @@ Other implementations:
 | 0x8000 | 0xffff | Internal Test ROM (256 bytes, mirrored)
 | 0xff00 | 0xff00 | DAC_OUT (8-bit unsigned, write-only)
 
-#### External memory map if using the recommended setup (see [pinout](#pinout))
+#### External memory map if using the recommended setup
+See pinout section for more information.
 
 | From | To | Description
 |--|--|--|
 | 0x2000 | 0x3fff | External RAM (32 bytes)
 | 0x4000 | 0x5fff | External Flash ROM (16KB)
 
-## Registers
+### Registers
 
 There are 8 general purposes 8-bit registers (A,B,C,D,E,F,G,H), two flag registers (CF, ZF), and 16-bit PC.
 
@@ -45,10 +46,10 @@ For memory addressing, 16-bit combined registers EF and GH are used.
 
 At reset time, PC is set to 0x4000. All other registers are set to 0x80.
 
-## Instruction Set
+### Instruction Set
 For future compatibility, please set the don't care bits (`?`) to `0`.
 
-### ALU reg, imm8: Immediate ALU operation
+#### ALU reg, imm8: Immediate ALU operation
 
 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -66,7 +67,7 @@ For future compatibility, please set the don't care bits (`?`) to `0`.
 - D : register
 - I : imm8
 
-### ALU dest, src, A {,shift}: ALU operation with src register & register A
+#### ALU dest, src, A {,shift}: ALU operation with src register & register A
 
 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -88,7 +89,7 @@ For future compatibility, please set the don't care bits (`?`) to `0`.
   - `01`: Shift right logical (shr)
   - `10`: Shift right arithmetic (sar)
 
-### ALU dest, [mem], A {,shift}: ALU operation with memory & register A
+#### ALU dest, [mem], A {,shift}: ALU operation with memory & register A
 
 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -112,7 +113,7 @@ For future compatibility, please set the don't care bits (`?`) to `0`.
   - `01`: Shift right logical (shr)
   - `10`: Shift right arithmetic (sar)
   
-### MOVR [mem], reg: Store content of register in memory
+#### MOVR [mem], reg: Store content of register in memory
 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | 0 | 0 | 1 | 1 | D | D | D | ? | ? | ? | M | ? | ? | 0 | 1 |
@@ -122,7 +123,7 @@ For future compatibility, please set the don't care bits (`?`) to `0`.
   - `0`: [GH]
   - `1`: [EF]
 
-### Jxx imm12: Conditional or unconditional jump to absolute address
+#### Jxx imm12: Conditional or unconditional jump to absolute address
 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0 | 0 | J |  J | I | I | I | I | I | I | I | I | I | I | I | I |
@@ -134,12 +135,12 @@ For future compatibility, please set the don't care bits (`?`) to `0`.
 - I: imm12
   - PC = (PC & 0xe000) | (imm12 << 1)
 
-### JMP GH: Unconditional jump to address GH
+#### JMP GH: Unconditional jump to address GH
 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0 | 1 | ? |  ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 
-## Pinout
+### Pinout
 Due to TT07 IO constraints, pins are shared between *Address bus LSB* and *Data bus OUT*. It means that during memory write instructions, the address space is only 128 bytes.
 
 | Pins | Standard mode | During memory write execute+writeback cycles
@@ -155,18 +156,18 @@ external logic and use uo[6] for RAM OE# and uo[5] for Flash ROM OE#.
 
 To get a bidirectional data bus (needed for SRAM), uio bus must be connected to ui bus with resistors. To be tested!
 
-# How to test
+## How to test
 
 An internal test ROM with two demos is included for easy testing. Just select the corresponding DIP switches at reset time to start the demo (technically, a ***jmp GH*** instruction will be seen on the data bus thanks to the DIP switches values, with GH=0x8080 at reset).
 
-## Demo 1: Rotating LED indicator
+### Demo 1: Rotating LED indicator
 | SW1 | SW2 | SW3 | SW4 | SW5 | SW6 | SW7 | SW8 |
 |--|--|--|--|--|--|--|--|
 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
 
 No external hardware needed. This demo shows a rotating indicator on the 7-segment display. Its speed can be changed with DIP switches, the internal delay loop is entirely deactivated when all switches are reset.
 
-## Demo 2: Bytebeat Synthetizer
+### Demo 2: Bytebeat Synthetizer
 
 | SW1 | SW2 | SW3 | SW4 | SW5 | SW6 | SW7 | SW8 |
 |--|--|--|--|--|--|--|--|
@@ -178,7 +179,7 @@ Modem handshakes sound like music to your hears? It's your lucky day! Become a b
 
 Connect ua[0] -> amp(TBD?) -> speaker. Play with the DIP switches to change the loop settings. Suggested frequency/amp/passives TBD. 
 
-# External hardware
+## External hardware
 
 * No external hardware for Demo 1
 * Speaker (+ amp?) for Demo 2
