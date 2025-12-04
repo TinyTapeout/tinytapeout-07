@@ -25,14 +25,14 @@ To observe the network's output one need to bring the state machine to the first
 
 Below is the structure for inputting the neurons entries:
 
-![ChipUSM1 (1)](https://github.com/Kevomlml/tt07_chipusm_neural_network/assets/158077239/308f0b48-d2a9-49f5-822f-4b13980fadf6)
+![ChipUSM1 (1)](images/1.png){height=40%}
 
 Node A corresponds to the output of the state machine, and node B to the parameters for each neuron.
 
 Regarding the parameters, they are fed in sequence, from neuron 3 to neuron 0. And the weights correspond to powers of 2, so, if w00=3, the input0 to the neuron0 will be multiplied by 2³.
 
 
-![ChipUSM2](https://github.com/Kevomlml/tt07_chipusm_neural_network/assets/158077239/abb3bc67-820e-453c-9c4b-f3741869816d)
+![ChipUSM2](images/2.png)
 
 ## How to test
 
