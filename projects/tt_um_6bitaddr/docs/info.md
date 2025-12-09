@@ -8,20 +8,15 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-## 6 Bit Addr: Overview
 
-2x6 bit inputs with a carry
-6 bit output with a carry
+2x6 bit inputs with a carry, 6 bit output with a carry
 
 ## How to test
-## Addition with no carry
 
-A=0b000001
-IC = 0
-B=0b000001
-O=0b000010
-OC = 0
+### Addition with no carry
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+A=0b000001 \
+IC = 0 \
+B=0b000001 \
+O=0b000010 \
+OC = 0 \
