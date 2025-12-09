@@ -14,7 +14,3 @@ con una Implementacion de un modulador de ancho de pulso (PWM) mediante Verilog 
 ## How to test
 
 con un fpga de xilinx basys 3
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
