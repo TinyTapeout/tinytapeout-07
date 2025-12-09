@@ -15,8 +15,6 @@ The gps signal generator is a configurable block capable used to test search alg
 
 - Core: the core of the project is composed by a Gold Code generator, an NCO (numerically controlled oscillator) and PRNGs (pseudo random number generators). The core also provides a 1-bit message input to modulate the generated signal with a "navigation message".
 
-## Block Diagram
-
 ![Block Diagram](./gps_gen_bd.drawio.svg)
 
 ## Serial communication
@@ -65,7 +63,9 @@ This section describes the registers of the device and its functionality.
 
 - d[7:0]: Doppler selection. The resultant frequency will be equal to:
 
-$$ \large f_{out} = 4092000.0 -8000.0 + 500.0*(d-176) MHz $$
+$$
+f_{out} = 4092000.0 -8000.0 + 500.0*(d-176) MHz
+$$
 
 
 ### Code phase low register:
@@ -105,10 +105,8 @@ $$ \large f_{out} = 4092000.0 -8000.0 + 500.0*(d-176) MHz $$
 
 Clock frequency of the system should be set to 16.368 MHz. The register bank is configured with a uart interface at 115200 bauds. Enable the design by writting the corresponding bit of the control bank.
 
-### External hardware
+## External hardware
 
 A micropocessor or FPGA can be used to modulate the navigation message at the input. The output can be recorded for post-analysis or fed to the digital front end of a GPS receiver. The output is a 1-bit signal.
 
-### Example: expected output of a search algorithm
-
-![search_example](./search_example.png)
+![Example: expected output of a search algorithm](./search_example.png)
