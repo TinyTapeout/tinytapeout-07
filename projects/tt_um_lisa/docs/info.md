@@ -6,7 +6,7 @@ would be found on commercial microcontrollers including timers, GPIO,
 UARTs and I2C.
 The following is a block diagram of the LISA Microcontroller:
 
-![](block_diag.png)
+![LISA Microcontroller Block Diagram](block_diag.png)
 
    - The LISA Core has a minimal set of register that allow it to run C programs:
       - Program Counter + Return Address Resister
@@ -60,7 +60,7 @@ I/O pins are auto-detected by the debug_autobaud module from the following choic
     uio_in[4] / uio_out[5]    LISA PMOD board (I am developing)
     uio_in[6] / uio_out[5]    Standard UART PMOD
 
-![](debug_uart.png)
+![Debug Connectivity and Autobaud](debug_uart.png)
 
 The RX/TX pair port is auto-detected after reset by the autobaud circuit, and the UART baud rate can either be
 configured manually or auto detected by the autobaud module.  After reset, the ui_in[7] pin is sampled to determine
@@ -130,7 +130,7 @@ QUAD SPI, Flash or SRAM access, 16-Bit or 24-Bit addressing, and selectable Chip
 type of access.  To achieve this, a QSPI arbiter is used to allow multiple accessors as shown in
 the following diagram:
 
-![](qspi_arch.png)
+![(Q)SPI Controller Interface Diagram](qspi_arch.png)
 
 The arbiter is controlled via configuration registers (accessible by the Debug controller)
 that specify the operating mode per CE, and CE selection bits for each of the three interfaces:
@@ -256,7 +256,7 @@ word or from a memory location addressed by either the Stack Pointer (SP) or Ind
 There are also instructions that work on the 15-bit registers PC, SP, IX and RA (Return Address).  As
 well as floating point operations. These will be covered in the sections to follow.
 
-![](lisa_arch.png)
+![Simplified LISA Processor Block Diagram](lisa_arch.png)
 
 ### Addressing Modes
 
@@ -397,8 +397,8 @@ To do any useful work, the LISA core must be able to load and operate on data.  
 accumulator using the various addressing modes.  The diagram below details the Direct addressing mode where
 data is stored directly in the opcode / instruction word:
 
-![](lisa_direct_acc.png)
-\clearpage
+![Accumulator Direct Operations Diagram](lisa_direct_acc.png)
+
 The instructions that use direct addressing are:
 
  | Opcode | Operation        | Encoding            | Description               |
@@ -416,7 +416,7 @@ The Accumulator Indirect operations use immediate data in the instruction word t
 indirectly into Data memory.  That memory address is then used to load, store or both
 load and store (swap) data with the accumulator.
 
-![](lisa_indirect_acc.png)
+![Accumulator Indirect Operations Diagram](lisa_indirect_acc.png)
 
  | Opcode | Operation   | Encoding            | Description                   |
  | ------ | ----------- | ------------------- | ----------------------------- |
@@ -436,7 +436,7 @@ sign extended, so only positive direction indexing is supported.  This was selec
 is typically used to access either local variables (when using SP) or C struct members (when using IX), 
 and in both cases, negative index offsets aren't very useful.  The following is a diagram of indexed addressing:
 
-![](lisa_indexed.png)
+![Indexed Addressing Diagram](lisa_indexed.png)
 
  | Opcode | Operation       | Encoding            | Description                         |
  | ------ | --------------- | ------------------- | ----------------------------------- |
@@ -457,7 +457,7 @@ and in both cases, negative index offsets aren't very useful.  The following is 
  |        | M[ind] <= A     |                     |                                     |
  | xor    | A <= A ^ M[ind] | 1110_00si_iiii_iiii | XOR A with index memory             |
 
-\clearpage
+
 Legend for table above:
 
  - ind = IX or SP + immediate
@@ -481,7 +481,7 @@ Stack operations use the current value of the SP register to PUSH and POP items 
 opcode.  As items are PUSHed to the stack, the SP is decremented after each byte, and as they
 are POPed, the SP is incremented prior to reading from RAM.
 
-![](lisa_stack.png)
+![Stack Addressing Diagram](lisa_stack.png)
 
  | Opcode  | Operation     | Encoding            | Description               |
  | ------- | ------------- | ------------------- | ------------------------- |
@@ -510,7 +510,6 @@ Also need to download the Python based debugger.
   - C compiler is somewhat functional (no float support at the moment) but has *many* bugs in the generated code and is still a work in progress.
   - Python debugger can erase/program the FLASH, program SPI SRAM, start/stop the LISA core, read SRAM and registers.
 
-\clearpage
 ### Legend for Pinout
 
   - pa: LISA GPIO PortA Input
