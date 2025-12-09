@@ -32,12 +32,14 @@ First off, whenever `data_rdy` is pulsed, the main state machine in the parser d
 ## How to test
 
 Connect the chip to a mode 0 SPI master, with a clock rate at least 6x slower than the chip clock. Then, fill the LMS history and weights, by using the following instruction:
+
 | bit[7] | bit[6] | bit[5] | bit[4] | bit[3] | bit[2] | bit[1] | bit[0] |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 |   0   |      |      |      | Adress[1] | Adress[0] | BankSel |   0    |
 
 BankSel chooses between history and weights, 1 for weights and 0 for history. Adress is just which of the 4 values to fill, as specified by QOA. The next two bytes are the data to fill the history or weights with, MSB first.
 If you want to then send a sample, the following instruction is used:
+
 | bit[7] | bit[6] | bit[5] | bit[4] | bit[3] | bit[2] | bit[1] | bit[0] |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 | sf_quant[3] | sf_quant[2] | sf_quant[1] | sf_quant[0] | qr[2] | qr[1] | qr[0] |   1    |
@@ -45,6 +47,7 @@ If you want to then send a sample, the following instruction is used:
 qr and sf_quant are exactly as they are in the QOA specification, with this chip decoding sample by sample.
 
 After sending the sample, wait 40 chip clock cycles, then request the sample with the following instruction:
+
 | bit[7] | bit[6] | bit[5] | bit[4] | bit[3] | bit[2] | bit[1] | bit[0] |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 |   1    |        |        |        |        |        |        |   0    |
