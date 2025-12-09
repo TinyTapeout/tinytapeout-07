@@ -7,7 +7,7 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
-# How it works
+## How it works
 
 This is Ben Eater's 8 Bit computer on an ASIC!
 
@@ -15,17 +15,15 @@ All credit for the design, amazing instructional videos, and diagams below goes 
 
 ![Overview with chip descriptions](images/1.jpg)
 
-## High level overview
+### High level overview
 
-Full Computer Schematic:
-![High level diagram](images/2.jpg)
+![Full Computer Schematic](images/2.jpg)
 
-Simple Control Signal Diagram:
-![Simple diagram](images/3.jpg)
+![Simple Control Signal Diagram](images/3.jpg)
 
 *Note: The output register and logic to display the digits is not included on the ASIC. The 8 bit output value is put on the bus and the "output register in" control signal (oi) is on an output pin. This way you can use the data bus as a general purpose interface to any display you want. (i.e. you can read in the data to the RP2040 and show it on the screen, you can build the actual output register as shown in the videos and connect it to the PMOD header, etc.)
 
-# How to test
+## How to test
 
 To program the computer follow these steps:
   - enable my design in TT
@@ -34,7 +32,7 @@ To program the computer follow these steps:
   - since this computer only has a 4 bit address space you can only store 16 bytes total in the internal RAM.
   - see https://eater.net/8bit/ for more details.
   
-## Instructions
+### Instructions
 | OPC | DEC | HEX  | DESCRIPTION                                                    |
 |-----|-----|------|----------------------------------------------------------------|
 | NOP | 00  | 0000 |                                                                |
@@ -54,7 +52,7 @@ To program the computer follow these steps:
 | OUT | 14  | 1110 | Output register A to 7 segment LED display as decimal.         |
 | HLT | 15  | 1111 | Halt execution.                                                |
 
-# External hardware
+## External hardware
 
 You will need the RP2040 or a similar microcontroller to write the program into the internal memory. If you really wanted to, you could go old school and use DIP switches and a manual clock pulse as well.
 
