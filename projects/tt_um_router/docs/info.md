@@ -14,7 +14,3 @@ routes the data to 3 directions
 ## How to test
 
 give input to data_in
-
-## External hardware
-
-
