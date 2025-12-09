@@ -24,12 +24,14 @@ Depending on how terms are represented, (2) is a very simple operating to implem
 The "cheat" is to operate on pre-factored values: for example, the first few fractions of the above example:
 
 $$
-2^0    3^0    5^0    7^{-1} 11^0    13^{-1} 17^1,
-2^1    3^1    5^{-1} 7^0    11^0    13^1    17^{-1},
-2^0    3^{-1} 5^0    7^0    11^0    13^0    17^{-1} 19^1,
-2^{-1} 3^0    5^0    7^0    11^0    13^0    17^0    19^{-1} 23^1,
-2^0    3^{-1} 5^0    7^0    11^{-1} 13^0    17^0    19^0    23^0 29^1,
+\begin{align*}
+&2^0\quad    &3^0\quad    &5^0\quad    &7^{-1}\quad &11^0\quad    &13^{-1}\quad &17^1, \\
+&2^1\quad    &3^1\quad    &5^{-1}\quad &7^0\quad    &11^0\quad    &13^1\quad    &17^{-1}, \\
+&2^0\quad    &3^{-1}\quad &5^0\quad    &7^0\quad    &11^0\quad    &13^0\quad    &17^{-1}\quad &19^1, \\
+&2^{-1}\quad &3^0\quad    &5^0\quad    &7^0\quad    &11^0\quad    &13^0\quad    &17^0\quad    &19^{-1}\quad &23^1, \\
+&2^0\quad    &3^{-1}\quad &5^0\quad    &7^0\quad    &11^{-1}\quad &13^0\quad    &17^0\quad    &19^0\quad    &23^0\quad &29^1,
 \cdots
+\end{align*}
 $$
 
 For $n = 825 = 3^1 5^2 11^1$, $nq \in \mathbb{N}$ if all pairwise added prime factor degrees are positive: testing $825 \times \frac{17}{91}$:
