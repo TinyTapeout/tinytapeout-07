@@ -59,59 +59,6 @@ Rx: DATA0, DATA1
 | ...               |         |        | ...                                                                        |
 | step_table[15]    |  0x1F   | RW     | Motor State 15: 8-bits mapped to uio[7:0].                                 |
 
-## Pinout
-
-### Inputs
-ui[0]: General Purpose Input gpi[0]
-
-ui[1]: General Purpose Input gpi[1]
-
-ui[2]: General Purpose Input gpi[2]
-
-ui[3]: General Purpose Input gpi[3]
-
-ui[4]: SPI0.cs
-
-ui[5]: SPI0.sck
-
-ui[6]: SPI0.tx
-
-ui[7]: Connected to uo[6]
-
-### Outputs
-uo[0]: General Purpose Output gpo[0]
-
-uo[1]: General Purpose Output gpo[1]
-
-uo[2]: General Purpose Output gpo[2]
-
-uo[3]: General Purpose Output gpo[3]
-
-uo[4]: Connected to ^uio_in
-
-uo[5]: Connected to ui[7]
-
-uo[6]: Connected to ena
-
-uo[7]: SPI0.rx
-
-### Bidirectional pins
-uio[0]: Motor Control mc[0]
-
-uio[1]: Motor Control mc[1]
-
-uio[2]: Motor Control mc[2]
-
-uio[3]: Motor Control mc[3]
-
-uio[4]: Motor Control mc[4]
-
-uio[5]: Motor Control mc[5]
-
-uio[6]: Motor Control mc[6]
-
-uio[7]: Motor Control mc[7]
-
 ## How to test
 
 Connect up the external hardware, program the registers, and write a 1 to the run bit.
