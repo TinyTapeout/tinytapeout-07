@@ -16,7 +16,7 @@ hardware registers and their initialization in the code.
 
 ## How to test
 First, one must build the toolchain for an RV32E, as you can see here:
-```
+```bash
 sudo apt-get update
 sudo apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
 git clone --recursive https://github.com/riscv/riscv-gnu-toolchain.git
@@ -26,7 +26,7 @@ make
 export PATH=/opt/riscv32e/bin:$PATH
 ```
 The following hardware addresses are given:
-```
+```c
 #define LSR_DR 0x01
 #define LSR_TEMT 0x40
 #define LSR_THRE 0x20
