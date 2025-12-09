@@ -1,8 +1,9 @@
-this is a clock
 ## How it works
+this is a clock
 
-pcb will be public at :https://github.com/ender110/tiny-tape-out-clock-pcb
-3d shell will be public at:https://github.com/ender110/tiny-tape-out-clock-shell 
+pcb will be public at: https://github.com/ender110/tiny-tape-out-clock-pcb \
+3d shell will be public at: https://github.com/ender110/tiny-tape-out-clock-shell 
+
 ## How to test
 
 follow How it works
