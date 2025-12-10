@@ -70,12 +70,30 @@ RP2040 SPI Master <--SPI--> SPI_WRAPPER <--regaccess--> User logic
 * Write data
 cmd = 0x80+addr, addr = 0 ~ 7
 
-```txt
-    Bit:       | <15>      <14>         <13>         <12>        <11>     <10>       <9>       <8>       <7>       <6>       <5>       <4>       <3>       <2>       <1>       <0>   |
-    MOSI:      |   1  | Don't Care | Don't Care | Don't Care | addr[3] | addr[2] | addr[1] | addr[0] | data[7] | data[6] | data[5] | data[4] | data[3] | data[2] | data[1] | data[0] |
-    MISO:      |   0  |      0     |      0     |      0     |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |
-    CS:     1  |   0  |      0     |      0     |      0     |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |    0    |  1
-```
+The following tables are bitfields for each SPI connection - the number in the heading of the table is the bit position.
+
+#### MOSI
+
+| 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| -- | -- | -- | -- | -- | -- | - | - | - | - | - | - | - | - | - | - |
+| 1  | X | X | X | addr​[3] | addr​[2] | addr​[1] | addr​[0] | data​[7] | data​[6] | data​[5] | data​[4] | data​[3] | data​[2] | data​[1] | data​[0] |
+
+X = Don't Care
+
+#### MISO
+
+| 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| -- | -- | -- | -- | -- | -- | - | - | - | - | - | - | - | - | - | - |
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+#### CS
+This signal both begins and ends with 1.
+
+| 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+| -- | -- | -- | -- | -- | -- | - | - | - | - | - | - | - | - | - | - |
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+#### Wavedrom waveforms
 
 Wavedrom for Write data transfer:
 ```wavedrom
@@ -125,7 +143,7 @@ config: { hscale: 2 },
 Use SPI1 Master peripheral in RP2040 to start communication on SPI interface towards this design. Remember to configure the SPI mode using the switches in DIP switch (if you'd like to have CPOL=1 and CPHA=1). Alternatively, don't use the DIP switches and use the RP2040 GPIOs to configure the SPI mode in the desired mode.
 
 Example code to initialize SPI in REPL:
-```txt
+```python
 spi_miso = tt.pins.pin_uio3
 spi_cs = tt.pins.pin_uio4
 spi_clk = tt.pins.pin_uio5
@@ -138,10 +156,10 @@ spi = machine.SoftSPI(baudrate=10000, polarity=0, phase=0, bits=8, firstbit=mach
 spi_cs(1)
 ```
 Example code to Write to Addres[0] Data 0xA5:
-```txt
+```python
 spi_cs(0); spi.write(b'\x80\xa5'); spi_cs(1)
 ```
 Example code to Read from Addres[12]:
-```txt
+```python
 spi_cs(0); spi.write(b'\x0C'); spi.read(1); spi_cs(1)
 ```
